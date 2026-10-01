@@ -1,0 +1,10 @@
+# 2026-10-01T16:53:51.188746Z  $ cd '/Users/giteshkhare/PycharmProjects/PythonProject' && cat .env | grep -v "PASSWORD\|ACCESS_KEY" | grep -v "^$"
+BROWSERSTACK_USERNAME=giteshkhare_Dd0BHq
+AppURL=bs://2cb25d26a5b87168117ec49799f3cc5e51756e61
+PlatformType=android
+DeviceName=Samsung Galaxy S23
+DeviceVersion=13.0
+SESSION_NAME=test_wikipedia_sample
+BUILD_NAME=MEA | Wikipedia | android
+BUILD_NUMBER=1
+# exit=0 at 2026-10-01T16:53:51.655134Z

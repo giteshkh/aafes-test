@@ -1,0 +1,8 @@
+# 2026-09-30T21:16:08.122116Z  $ ls '/Users/giteshkhare/PycharmProjects/PythonProject/' && ls '/Users/giteshkhare/PycharmProjects/PythonProject/smoke/'
+Initializer.py			env.example
+Run_Config_Wikipedia.py		pyproject.toml
+Run_Local_Debugger_Wikipedia.py	requirements.txt
+browserstack_wikipedia.yml	smoke
+conftest.py
+conftest.py			test_wikipedia_sample.py
+# exit=0 at 2026-09-30T21:16:08.151480Z

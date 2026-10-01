@@ -1,0 +1,5 @@
+[32mINFO    [0m bstack11lll1l111l_opy_:bstack11ll1llllll_opy_.py:99 Remote Server Address being passed as : https://giteshkhare_Dd0BHq:fZo6PdQa5QEKYCnWbyjp@hub-cloud.browserstack.com/wd/hub
+[32mINFO    [0m bstack11lll1l111l_opy_:bstack11ll1llllll_opy_.py:431 Completed setup!
+[32mINFO    [0m bstack11lll1l111l_opy_:bstack11ll1llllll_opy_.py:124 driver_rank={driver_rank} driver.{method_name} platform_index={f.platform_index}: args={args} kwargs={'command_executor': 'https://hub-aps.browserstack.com/wd/hub', 'options': <appium.options.common.base.AppiumOptions object at 0x10ecddcd0>, 'keep_alive': True, 'file_detector': None}
+[33mWARNING [0m bstack11lll1l111l_opy_:bstack11ll1llllll_opy_.py:147 hub_url=https://hub-aps.browserstack.com/wd/hub
+[32mINFO    [0m bstack_utils.helper:helper.py:961 Sent EDS event 'DriverInitFailure' | Status 200

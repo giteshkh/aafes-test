@@ -1,0 +1,7 @@
+# 2026-10-01T17:32:05.310372Z  $ cd '/Users/giteshkhare/PycharmProjects/PythonProject' && '/Users/giteshkhare/PycharmProjects/PythonProject/.venv/bin/python' -m pytest Run_Local_Debugger_Wikipedia.py::TestLocalWikipedia -q --no-header --tb=short 2>&1
+/Users/giteshkhare/PycharmProjects/PythonProject/.venv/lib/python3.9/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+Test passed:  Run_Local_Debugger_Wikipedia.py::TestLocalWikipedia::test_wikipedia_local[4] None
+.                                                                        [100%]
+1 passed in 23.68s
+# exit=0 at 2026-10-01T17:32:29.939614Z

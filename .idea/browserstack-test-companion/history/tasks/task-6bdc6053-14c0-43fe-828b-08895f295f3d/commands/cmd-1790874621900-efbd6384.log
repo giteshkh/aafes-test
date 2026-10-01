@@ -1,0 +1,5 @@
+# 2026-10-01T17:10:21.901343Z  $ grep -n "buildName\|sessionName\|buildIdentifier\|BUILD_NAME\|SESSION_NAME\|BUILD_NUMBER" '/Users/giteshkhare/PycharmProjects/PythonProject/Initializer.py'
+89:                "buildName":       os.environ.get("BUILD_NAME",    "MEA | Local Debug"),
+90:                "sessionName":     os.environ.get("SESSION_NAME",  "local-debug"),
+91:                "buildIdentifier": os.environ.get("BUILD_NUMBER",  "1"),
+# exit=0 at 2026-10-01T17:10:21.954358Z

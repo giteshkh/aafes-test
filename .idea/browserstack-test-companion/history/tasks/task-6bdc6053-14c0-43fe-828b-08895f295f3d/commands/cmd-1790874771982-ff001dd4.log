@@ -1,0 +1,7 @@
+# 2026-10-01T17:12:51.983625Z  $ python3 -c "from dotenv import load_dotenv; print('dotenv OK')" 2>&1 && grep -n "buildName\|sessionName\|buildIdentifier" '/Users/giteshkhare/PycharmProjects/PythonProject/Initializer.py'
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    from dotenv import load_dotenv; print('dotenv OK')
+    
+ModuleNotFoundError: No module named 'dotenv'
+# exit=1 at 2026-10-01T17:12:52.776711Z

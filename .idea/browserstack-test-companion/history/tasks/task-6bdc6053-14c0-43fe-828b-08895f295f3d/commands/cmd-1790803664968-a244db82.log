@@ -1,0 +1,10 @@
+# 2026-09-30T21:27:44.969141Z  $ cd '/Users/giteshkhare/PycharmProjects/PythonProject' && BROWSERSTACK_USERNAME=<redacted> BROWSERSTACK_ACCESS_KEY=<redacted> AppURL=bs://2cb25d26a5b87168117ec49799f3cc5e51756e61 PlatformType=android DeviceName="Samsung Galaxy S23" DeviceVersion=13.0 SESSION_NAME=test_wikipedia_sample BUILD_NAME="MEA | Wikipedia | android" BUILD_NUMBER=1 python3 -m pytest smoke/test_wikipedia_sample.py -q --no-header --tb=short 2>&1
+.                                                                        [100%]
+=============================== warnings summary ===============================
+smoke/test_wikipedia_sample.py::TestWikipediaSample::test_wikipedia_first_screen_SME_WIKI_001
+  /Users/giteshkhare/.pyenv/versions/3.13.2/lib/python3.13/site-packages/appium/webdriver/appium_connection.py:65: UserWarning: Embedding username and password in URL could be insecure, use ClientConfig instead
+    return {**super().get_remote_connection_headers(parsed_url, keep_alive=keep_alive), **cls.extra_headers}
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+1 passed, 1 warning in 19.36s
+# exit=0 at 2026-09-30T21:28:05.673407Z

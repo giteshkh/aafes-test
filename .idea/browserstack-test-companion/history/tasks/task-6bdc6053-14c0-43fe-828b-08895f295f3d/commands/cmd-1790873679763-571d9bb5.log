@@ -1,0 +1,331 @@
+# 2026-10-01T16:54:39.784446Z  $ cd '/Users/giteshkhare/PycharmProjects/PythonProject' && /Users/giteshkhare/.pyenv/versions/3.13.2/bin/pytest Run_Local_Debugger_Wikipedia.py::TestLocalWikipedia -v --tb=long -s 2>&1
+============================= test session starts ==============================
+platform darwin -- Python 3.13.2, pytest-9.1.1, pluggy-1.6.0 -- /Users/giteshkhare/.pyenv/versions/3.13.2/bin/python3.13
+cachedir: .pytest_cache
+rootdir: /Users/giteshkhare/PycharmProjects/PythonProject
+configfile: pyproject.toml
+collecting ... 
+collected 1 item                                                               
+
+Run_Local_Debugger_Wikipedia.py::TestLocalWikipedia::test_wikipedia_local[4] ERROR
+
+==================================== ERRORS ====================================
+_________ ERROR at setup of TestLocalWikipedia.test_wikipedia_local[4] _________
+
+self = <Run_Local_Debugger_Wikipedia.TestLocalWikipedia object at 0x10b6e6510>
+request = <SubRequest 'driver' for <Function test_wikipedia_local[4]>>
+
+    @pytest.fixture(scope="module",
+                    params=[4])   # index into Initializer.devices[]
+    def driver(self, request):
+        """
+        Create a direct Appium session via Initializer (no SDK).
+        The driver is shared across all tests in this module.
+        """
+        device_index = request.param
+>       driver_instance = Initializer.get_driver(device_index=device_index)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Run_Local_Debugger_Wikipedia.py:51: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+cls = <class 'Initializer.Initializer'>, device_index = 4
+
+    @classmethod
+    def get_driver(cls, device_index):
+        devices = [
+            {"platformVersion": "14.0", "deviceName": "Google Pixel 8 Pro"},
+            {"platformVersion": "12.0", "deviceName": "Samsung Galaxy S22 Ultra"},
+            {"platformVersion": "13.0", "deviceName": "OnePlus 11R"},
+            {"platformVersion": "14.0", "deviceName": "Google Pixel 8"},
+            {"platformVersion": "13.0", "deviceName": "Samsung Galaxy S23 Ultra"},
+            {"platformVersion": "14.0", "deviceName": "Samsung Galaxy S24 Ultra"},
+            {"platformVersion": "11.0", "deviceName": "Samsung Galaxy S21 Ultra"},
+            {"platformVersion": "12.0", "deviceName": "Google Pixel 6 Pro"},
+            {"platformVersion": "10.0", "deviceName": "Google Pixel 4 XL"},
+            {"platformVersion": "11.0", "deviceName": "OnePlus 9"},
+            {"platformVersion": "10.0", "deviceName": "OnePlus 8"},
+            {"platformVersion": "17.0", "deviceName": "iPhone 15"},
+        ]
+    
+        device = devices[device_index]
+        options = AppiumOptions()
+        options.load_capabilities({
+            "platformName": "android",
+            "platformVersion": device["platformVersion"],
+            "deviceName": device["deviceName"],
+            "appium:automationName": "UiAutomator2",
+            "appium:app": cls.APP_URL,
+            "appium:noReset": "true",
+            "appium:ensureWebviewsHavePages": True,
+            "appium:nativeWebScreenshot": True,
+            "bstack:options": {
+                "source": "appiumdesktop",
+                "aiAuthoring": True,
+            },
+            "browserstack.idleTimeout": "300",
+            "appium:newCommandTimeout": 3600,
+            "appium:connectHardwareKeyboard": True,
+            "browserstack.video": "true",
+            "appProfiling": True,
+        })
+    
+>       driver_instance = webdriver.Remote(cls.HUB_URL, options=options)
+                          
+
+Initializer.py:95: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <appium.webdriver.webdriver.WebDriver (session="None")>
+command_executor = <appium.webdriver.appium_connection.AppiumConnection object at 0x10b6e6cf0>
+extensions = None
+options = <appium.options.common.base.AppiumOptions object at 0x10b6e67b0>
+client_config = <appium.webdriver.client_config.AppiumClientConfig object at 0x10b6e6a50>
+
+    def __init__(
+        self,
+        command_executor: str | AppiumConnection = 'http://127.0.0.1:4723',
+        extensions: list[type['ExtensionBase']] | None = None,
+        options: AppiumOptions | list[AppiumOptions] | None = None,
+        client_config: AppiumClientConfig | None = None,
+    ):
+        if isinstance(options, list):
+            # Normalize before Selenium separates common and alternative capabilities.
+            options = [
+                AppiumOptions().load_capabilities(AppiumOptions.as_w3c(option.to_capabilities())['capabilities']['alwaysMatch'])
+                for option in options
+            ]
+        command_executor, client_config = _get_remote_connection_and_client_config(
+            command_executor=command_executor, client_config=client_config
+        )
+>       super().__init__(
+            command_executor=command_executor,
+            options=options,  # type: ignore[arg-type]
+            locator_converter=AppiumLocatorConverter(),
+            web_element_cls=MobileWebElement,
+            client_config=client_config,
+        )
+
+../../.pyenv/versions/3.13.2/lib/python3.13/site-packages/appium/webdriver/webdriver.py:260: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <appium.webdriver.webdriver.WebDriver (session="None")>
+command_executor = <appium.webdriver.appium_connection.AppiumConnection object at 0x10b6e6cf0>
+keep_alive = True, file_detector = None
+options = <appium.options.common.base.AppiumOptions object at 0x10b6e67b0>
+locator_converter = <appium.webdriver.locator_converter.AppiumLocatorConverter object at 0x10b6e6e40>
+web_element_cls = <class 'appium.webdriver.webelement.WebElement'>
+client_config = <appium.webdriver.client_config.AppiumClientConfig object at 0x10b6e6a50>
+
+    def __init__(
+        self,
+        command_executor: str | RemoteConnection = "http://127.0.0.1:4444",
+        keep_alive: bool = True,
+        file_detector: FileDetector | None = None,
+        options: BaseOptions | list[BaseOptions] | None = None,
+        locator_converter: LocatorConverter | None = None,
+        web_element_cls: type[WebElement] | None = None,
+        client_config: ClientConfig | None = None,
+    ) -> None:
+        """Create a new driver instance that issues commands using the WebDriver protocol.
+    
+        Args:
+            command_executor: Either a string representing the URL of the remote
+                server or a custom remote_connection.RemoteConnection object.
+                Defaults to 'http://127.0.0.1:4444'.
+            keep_alive: (Deprecated) Whether to configure
+                remote_connection.RemoteConnection to use HTTP keep-alive.
+                Defaults to True.
+            file_detector: Pass a custom file detector object during
+                instantiation. If None, the default LocalFileDetector() will be
+                used.
+            options: Instance of a driver options.Options class.
+            locator_converter: Custom locator converter to use. Defaults to None.
+            web_element_cls: Custom class to use for web elements. Defaults to
+                WebElement.
+            client_config: Custom client configuration to use. Defaults to None.
+        """
+        if options is None:
+            raise TypeError(
+                "missing 1 required keyword-only argument: 'options' (instance of driver `options.Options` class)"
+            )
+        elif isinstance(options, list):
+            capabilities = create_matches(options)
+            _ignore_local_proxy = False
+        else:
+            capabilities = options.to_capabilities()
+            _ignore_local_proxy = options._ignore_local_proxy
+        self.command_executor = command_executor
+        if isinstance(self.command_executor, (str, bytes)):
+            self.command_executor = get_remote_connection(
+                capabilities,
+                command_executor=command_executor,
+                keep_alive=keep_alive,
+                ignore_local_proxy=_ignore_local_proxy,
+                client_config=client_config,
+            )
+        self._is_remote = True
+        self.session_id: str | None = None
+        self.caps: dict[str, Any] = {}
+        self.pinned_scripts: dict[str, Any] = {}
+        self.error_handler = ErrorHandler()
+        self._switch_to = SwitchTo(self)
+        self._mobile = Mobile(self)
+        self.file_detector = file_detector or LocalFileDetector()
+        self.locator_converter = locator_converter or LocatorConverter()
+        self._web_element_cls = web_element_cls or self._web_element_cls
+        self._authenticator_id = None
+        self.start_client()
+>       self.start_session(capabilities)
+
+../../.pyenv/versions/3.13.2/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py:296: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <appium.webdriver.webdriver.WebDriver (session="None")>
+capabilities = {'platformName': 'android', 'appium:platformVersion': '13.0', 'appium:deviceName': 'Samsung Galaxy S23 Ultra', 'appium:automationName': 'UiAutomator2', ...}
+browser_profile = None
+
+    def start_session(self, capabilities: dict | AppiumOptions, browser_profile: str | None = None) -> None:
+        """Creates a new session with the desired capabilities.
+    
+        Override for Appium
+    
+        Args:
+            capabilities: Read https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/caps.md
+             for more details.
+            browser_profile: Browser profile
+        """
+        if not isinstance(capabilities, (dict, AppiumOptions)):
+            raise InvalidArgumentException('Capabilities must be a dictionary or AppiumOptions instance')
+    
+        if isinstance(capabilities, AppiumOptions):
+            w3c_caps = capabilities.to_w3c()
+        elif (
+            set(capabilities) == {'capabilities'}
+            and isinstance(capabilities['capabilities'], dict)
+            and {'alwaysMatch', 'firstMatch'}.issubset(capabilities['capabilities'])
+        ):
+            # Selenium already creates the W3C envelope when given a list of options.
+            w3c_caps = copy.deepcopy(capabilities)
+        else:
+            w3c_caps = AppiumOptions.as_w3c(capabilities)
+>       response = self.execute(RemoteCommand.NEW_SESSION, w3c_caps)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+../../.pyenv/versions/3.13.2/lib/python3.13/site-packages/appium/webdriver/webdriver.py:371: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <appium.webdriver.webdriver.WebDriver (session="None")>
+driver_command = 'newSession'
+params = {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'platformName': 'android', 'appium:platformVersion': '13.0', 'appium:deviceName': 'Samsung Galaxy S23 Ultra', 'appium:automationName': 'UiAutomator2', ...}}}
+
+    def execute(
+        self,
+        driver_command: str | Generator[dict[str, Any], Any, Any],
+        params: dict[str, Any] | None = None,
+    ) -> Any:
+        """Sends a command to be executed by a command.CommandExecutor.
+    
+        Args:
+            driver_command: The name of the command to execute as a string.
+                Can also be a BiDi protocol command generator.
+            params: A dictionary of named parameters to send with the command.
+                Ignored when ``driver_command`` is a BiDi generator.
+    
+        Returns:
+            The command's JSON response loaded into a dictionary object.
+        """
+        # Handle BiDi generator commands
+        if inspect.isgenerator(driver_command):
+            # BiDi command: route through the WebSocket connection, not the
+            # HTTP RemoteConnection which only accepts (command, params) pairs.
+            if not self._websocket_connection:
+                self._start_bidi()
+            assert self._websocket_connection is not None
+            return self._websocket_connection.execute(driver_command)
+    
+        # Legacy WebDriver command: handle normally
+        params = self._wrap_value(params)
+    
+        if self.session_id:
+            if not params:
+                params = {"sessionId": self.session_id}
+            elif "sessionId" not in params:
+                params["sessionId"] = self.session_id
+    
+        response = cast(RemoteConnection, self.command_executor).execute(driver_command, params)
+    
+        if response:
+>           self.error_handler.check_response(response)
+
+../../.pyenv/versions/3.13.2/lib/python3.13/site-packages/selenium/webdriver/remote/webdriver.py:506: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x10b6e6f90>
+response = {'status': 401, 'value': 'Authorization Required'}
+
+    def check_response(self, response: dict[str, Any]) -> None:
+        """Check that a JSON response from the WebDriver does not have an error.
+    
+        Args:
+            response: The JSON response from the WebDriver server as a dictionary
+                object.
+    
+        Raises:
+            WebDriverException: If the response contains an error message.
+        """
+        status = response.get("status", None)
+        if not status or status == ErrorCode.SUCCESS:
+            return
+        value = None
+        message = response.get("message", "")
+        screen: str = response.get("screen", "")
+        stacktrace = None
+        if isinstance(status, int):
+            value_json = response.get("value", None)
+            if value_json and isinstance(value_json, str):
+                try:
+                    value = json.loads(value_json)
+                    if isinstance(value, dict):
+                        if len(value) == 1:
+                            value = value["value"]
+                        status = value.get("error", None)
+                        if not status:
+                            status = value.get("status", ErrorCode.UNKNOWN_ERROR)
+                            message = value.get("value") or value.get("message")
+                            if not isinstance(message, str):
+                                value = message
+                                message = message.get("message") if isinstance(message, dict) else None
+                        else:
+                            message = value.get("message", None)
+                except ValueError:
+                    pass
+    
+        exception_class: type[WebDriverException]
+        e = ErrorCode()
+        error_codes = [item for item in dir(e) if not item.startswith("__")]
+        for error_code in error_codes:
+            error_info = getattr(ErrorCode, error_code)
+            if isinstance(error_info, list) and status in error_info:
+                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)
+                break
+        else:
+            exception_class = WebDriverException
+    
+        if not value:
+            value = response["value"]
+        if isinstance(value, str):
+>           raise exception_class(value)
+E           selenium.common.exceptions.WebDriverException: Message: Authorization Required
+
+../../.pyenv/versions/3.13.2/lib/python3.13/site-packages/selenium/webdriver/remote/errorhandler.py:196: WebDriverException
+=============================== warnings summary ===============================
+Run_Local_Debugger_Wikipedia.py::TestLocalWikipedia::test_wikipedia_local[4]
+  /Users/giteshkhare/.pyenv/versions/3.13.2/lib/python3.13/site-packages/appium/webdriver/appium_connection.py:65: UserWarning: Embedding username and password in URL could be insecure, use ClientConfig instead
+    return {**super().get_remote_connection_headers(parsed_url, keep_alive=keep_alive), **cls.extra_headers}
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+ERROR Run_Local_Debugger_Wikipedia.py::TestLocalWikipedia::test_wikipedia_local[4]
+========================= 1 warning, 1 error in 1.09s ==========================
+# exit=1 at 2026-10-01T16:54:44.028736Z

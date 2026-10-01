@@ -1,0 +1,8 @@
+# 2026-10-01T17:32:36.111031Z  $ grep -n "buildIdentifier\|buildName\|sessionName\|projectName\|BUILD_NAME\|SESSION_NAME" '/Users/giteshkhare/PycharmProjects/PythonProject/Initializer.py'
+74:        build_name   = os.environ.get("BUILD_NAME",   "MEA | Local Debug")
+75:        session_name = os.environ.get("SESSION_NAME", "test_wikipedia_local")
+77:        # buildIdentifier MUST be unique per run — this is what BrowserStack uses
+95:                "projectName": project_name,
+96:                "buildName":   build_name,
+97:                "sessionName": session_name,
+# exit=0 at 2026-10-01T17:32:36.135465Z

@@ -1,0 +1,9 @@
+# 2026-10-01T17:52:09.122572Z  $ grep -n "proxyUnawareApp\|buildName\|sessionName\|SESSION_NAME\|BUILD_NAME" '/Users/giteshkhare/PycharmProjects/PythonProject/Initializer.py'
+74:        # Append timestamp to buildName so each run creates a NEW build on the
+76:        _base_name   = os.environ.get("BUILD_NAME",   "MEA | Local Debug")
+78:        session_name = os.environ.get("SESSION_NAME", "test_wikipedia_local")
+95:                "buildName":      build_name,
+96:                "sessionName":    session_name,
+97:                # proxyUnawareApp: tells BrowserStack the app does not go through
+100:                "proxyUnawareApp": True,
+# exit=0 at 2026-10-01T17:52:09.153552Z

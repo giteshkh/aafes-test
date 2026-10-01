@@ -1,0 +1,1731 @@
+2026-10-01T18:02:22.186Z CLI info    Config : {"userName":"****","accessKey":"****","framework":"pytest","app":"bs://2cb25d26a5b87168117ec49799f3cc5e51756e61","platforms":[{"platformName":"android","deviceName":"Samsung Galaxy S23","platformVersion":"13.0"}],"browserstackLocal":false,"sessionName":"test_wikipedia_sample","buildName":"MEA | Wikipedia | android","projectName":"AAFES-MEA","buildIdentifier":"1","debug":true,"networkLogs":false,"appProfiling":false,"disableAutoCaptureLogs":true,"percy":false,"percyCaptureMode":"manual","interactiveDebugging":true,"selfHeal":false,"aiAuthoring":false,"appium:newCommandTimeout":400,"browserstack.idleTimeout":400,"proxyUnawareApp":true}
+2026-10-01T18:02:22.189Z CLI info    Should start debug utility: undefined
+2026-10-01T18:02:22.226Z CLI info [testhub:module]   [234d3441-f506-4aa3-9379-41705f02dc29]  Starting testhub from 60817:0
+2026-10-01T18:02:23.503Z CLI info   [234d3441-f506-4aa3-9379-41705f02dc29]  [PRODUCTION] Making POST request to https://sdk.browserstack.com
+2026-10-01T18:02:23.504Z CLI info   [234d3441-f506-4aa3-9379-41705f02dc29]  [PRODUCTION] Making GET request to https://hub.browserstack.com
+2026-10-01T18:02:23.740Z CLI info   [234d3441-f506-4aa3-9379-41705f02dc29]  [PRODUCTION] Making GET request to https://hub-aps.browserstack.com
+2026-10-01T18:02:23.740Z CLI info   [234d3441-f506-4aa3-9379-41705f02dc29]  [PRODUCTION] Making GET request to https://hub-euw.browserstack.com
+2026-10-01T18:02:23.741Z CLI info   [234d3441-f506-4aa3-9379-41705f02dc29]  [PRODUCTION] Making GET request to https://hub-apse.browserstack.com
+2026-10-01T18:02:24.673Z CLI info [testhub:module]   [234d3441-f506-4aa3-9379-41705f02dc29]  startBuild: response=vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk
+2026-10-01T18:02:24.675Z CLI info  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  [PRODUCTION] Making POST request to https://api.browserstack.com
+2026-10-01T18:02:25.759Z CLI info [appautomate:service]  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  Using app: bs://2cb25d26a5b87168117ec49799f3cc5e51756e61
+2026-10-01T18:02:27.386Z CLI info [testhub:request-queue-handler]  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  Added the event {
+  event_type: 'HookRunStarted',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'BEFORE_EACH',
+    framework: 'pytest',
+    uuid: '74f6e207-003e-410a-9403-5f6e1875010e',
+    name: 'setup',
+    result: 'pending',
+    test_run_id: '16034893-18ff-498b-a349-6343d503c573',
+    body: { lang: 'python', code: null },
+    scope: 'test_wikipedia_first_screen_SME_WIKI_001',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'smoke', 'test_wikipedia_sample.py', 'TestWikipediaSample' ],
+    file_name: 'smoke/test_wikipedia_sample.py',
+    location: 'smoke/test_wikipedia_sample.py',
+    vc_filepath: 'smoke/test_wikipedia_sample.py',
+    started_at: '2026-10-01T18:02:27.380Z'
+  },
+  logs: []
+} to 60817:0 (target=/api/v2/builds/vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk/batch)
+2026-10-01T18:02:27.390Z CLI info [testhub:request-queue-handler]  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  Added the event {
+  event_type: 'LogCreated',
+  logs: [
+    {
+      testFrameworkName: 'pytest',
+      testFrameworkVersion: '8.2.2',
+      testFrameworkState: 'INIT_TEST',
+      timestamp: '2026-10-01T18:02:26.799Z',
+      uuid: '16034893-18ff-498b-a349-6343d503c573',
+      kind: 'TEST_LOG',
+      message: '2026-10-01T18:02:27Z [bstack11lll1l111l_opy_][INFO] - Remote Server Address being passed as : https://[REDACTED]:[REDACTED]@hub-cloud.browserstack.com/wd/hub',
+      level: 'INFO',
+      test_run_uuid: '16034893-18ff-498b-a349-6343d503c573'
+    }
+  ]
+} to 60817:0 (target=/api/v2/builds/vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk/logs/batch)
+2026-10-01T18:02:27.392Z CLI info [sdk:service]  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  Driver initialized as primary driver: platformIndex=0
+2026-10-01T18:02:27.395Z CLI info [testhub:request-queue-handler]  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  Added the event {
+  event_type: 'LogCreated',
+  logs: [
+    {
+      testFrameworkName: 'pytest',
+      testFrameworkVersion: '8.2.2',
+      testFrameworkState: 'INIT_TEST',
+      timestamp: '2026-10-01T18:02:26.799Z',
+      uuid: '16034893-18ff-498b-a349-6343d503c573',
+      kind: 'TEST_LOG',
+      message: '2026-10-01T18:02:27Z [bstack11lll1l111l_opy_][INFO] - Completed setup!',
+      level: 'INFO',
+      test_run_uuid: '16034893-18ff-498b-a349-6343d503c573'
+    }
+  ]
+} to 60817:0 (target=/api/v2/builds/vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk/logs/batch)
+2026-10-01T18:02:27.396Z CLI info [testhub:request-queue-handler]  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  Added the event {
+  event_type: 'LogCreated',
+  logs: [
+    {
+      testFrameworkName: 'pytest',
+      testFrameworkVersion: '8.2.2',
+      testFrameworkState: 'INIT_TEST',
+      timestamp: '2026-10-01T18:02:26.799Z',
+      uuid: '16034893-18ff-498b-a349-6343d503c573',
+      kind: 'TEST_LOG',
+      message: "2026-10-01T18:02:27Z [bstack11lll1l111l_opy_][INFO] - driver_rank={driver_rank} driver.{method_name} platform_index={f.platform_index}: args={args} kwargs={'command_executor': 'https://hub-aps.browserstack.com/wd/hub', 'options': <appium.options.common.base.AppiumOptions object at 0x10ecddcd0>, 'keep_alive': True, 'file_detector': None}",
+      level: 'INFO',
+      test_run_uuid: '16034893-18ff-498b-a349-6343d503c573'
+    }
+  ]
+} to 60817:0 (target=/api/v2/builds/vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk/logs/batch)
+2026-10-01T18:02:27.400Z CLI info [testhub:request-queue-handler]  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  Added the event {
+  event_type: 'LogCreated',
+  logs: [
+    {
+      testFrameworkName: 'pytest',
+      testFrameworkVersion: '8.2.2',
+      testFrameworkState: 'INIT_TEST',
+      timestamp: '2026-10-01T18:02:26.799Z',
+      uuid: '16034893-18ff-498b-a349-6343d503c573',
+      kind: 'TEST_LOG',
+      message: '2026-10-01T18:02:27Z [bstack11lll1l111l_opy_][WARNING] - hub_url=https://hub-aps.browserstack.com/wd/hub',
+      level: 'INFO',
+      test_run_uuid: '16034893-18ff-498b-a349-6343d503c573'
+    }
+  ]
+} to 60817:0 (target=/api/v2/builds/vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk/logs/batch)
+2026-10-01T18:02:27.402Z CLI info [local:module]  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  initSession: localIdentifier=undefined pid=undefined
+2026-10-01T18:02:28.678Z CLI info [testhub:request-queue-handler]  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  Processing batch event [
+  {
+    event_type: 'HookRunStarted',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'BEFORE_EACH',
+      framework: 'pytest',
+      uuid: '74f6e207-003e-410a-9403-5f6e1875010e',
+      name: 'setup',
+      result: 'pending',
+      test_run_id: '16034893-18ff-498b-a349-6343d503c573',
+      body: { lang: 'python', code: null },
+      scope: 'test_wikipedia_first_screen_SME_WIKI_001',
+      custom_metadata: {},
+      tags: [],
+      scopes: [ 'smoke', 'test_wikipedia_sample.py', 'TestWikipediaSample' ],
+      file_name: 'smoke/test_wikipedia_sample.py',
+      location: 'smoke/test_wikipedia_sample.py',
+      vc_filepath: 'smoke/test_wikipedia_sample.py',
+      started_at: '2026-10-01T18:02:27.380Z'
+    },
+    logs: []
+  }
+] to 60817:0
+2026-10-01T18:02:28.679Z CLI info  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-10-01T18:02:29.341Z CLI info [testhub:request-queue-handler]  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  Added the event {
+  event_type: 'LogCreated',
+  logs: [
+    {
+      testFrameworkName: 'pytest',
+      testFrameworkVersion: '8.2.2',
+      testFrameworkState: 'INIT_TEST',
+      timestamp: '2026-10-01T18:02:26.799Z',
+      uuid: '16034893-18ff-498b-a349-6343d503c573',
+      kind: 'TEST_LOG',
+      message: "2026-10-01T18:02:29Z [bstack_utils.helper][INFO] - Sent EDS event 'DriverInitFailure' | Status 200",
+      level: 'INFO',
+      test_run_uuid: '16034893-18ff-498b-a349-6343d503c573'
+    }
+  ]
+} to 60817:0 (target=/api/v2/builds/vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk/logs/batch)
+2026-10-01T18:02:29.643Z CLI info [testhub:request-queue-handler]  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  Processing batch event [
+  {
+    event_type: 'LogCreated',
+    logs: [
+      {
+        testFrameworkName: 'pytest',
+        testFrameworkVersion: '8.2.2',
+        testFrameworkState: 'INIT_TEST',
+        timestamp: '2026-10-01T18:02:26.799Z',
+        uuid: '16034893-18ff-498b-a349-6343d503c573',
+        kind: 'TEST_LOG',
+        message: '2026-10-01T18:02:27Z [bstack11lll1l111l_opy_][INFO] - Remote Server Address being passed as : https://[REDACTED]:[REDACTED]@hub-cloud.browserstack.com/wd/hub',
+        level: 'INFO',
+        test_run_uuid: '16034893-18ff-498b-a349-6343d503c573'
+      }
+    ]
+  },
+  {
+    event_type: 'LogCreated',
+    logs: [
+      {
+        testFrameworkName: 'pytest',
+        testFrameworkVersion: '8.2.2',
+        testFrameworkState: 'INIT_TEST',
+        timestamp: '2026-10-01T18:02:26.799Z',
+        uuid: '16034893-18ff-498b-a349-6343d503c573',
+        kind: 'TEST_LOG',
+        message: '2026-10-01T18:02:27Z [bstack11lll1l111l_opy_][INFO] - Completed setup!',
+        level: 'INFO',
+        test_run_uuid: '16034893-18ff-498b-a349-6343d503c573'
+      }
+    ]
+  },
+  {
+    event_type: 'LogCreated',
+    logs: [
+      {
+        testFrameworkName: 'pytest',
+        testFrameworkVersion: '8.2.2',
+        testFrameworkState: 'INIT_TEST',
+        timestamp: '2026-10-01T18:02:26.799Z',
+        uuid: '16034893-18ff-498b-a349-6343d503c573',
+        kind: 'TEST_LOG',
+        message: "2026-10-01T18:02:27Z [bstack11lll1l111l_opy_][INFO] - driver_rank={driver_rank} driver.{method_name} platform_index={f.platform_index}: args={args} kwargs={'command_executor': 'https://hub-aps.browserstack.com/wd/hub', 'options': <appium.options.common.base.AppiumOptions object at 0x10ecddcd0>, 'keep_alive': True, 'file_detector': None}",
+        level: 'INFO',
+        test_run_uuid: '16034893-18ff-498b-a349-6343d503c573'
+      }
+    ]
+  },
+  {
+    event_type: 'LogCreated',
+    logs: [
+      {
+        testFrameworkName: 'pytest',
+        testFrameworkVersion: '8.2.2',
+        testFrameworkState: 'INIT_TEST',
+        timestamp: '2026-10-01T18:02:26.799Z',
+        uuid: '16034893-18ff-498b-a349-6343d503c573',
+        kind: 'TEST_LOG',
+        message: '2026-10-01T18:02:27Z [bstack11lll1l111l_opy_][WARNING] - hub_url=https://hub-aps.browserstack.com/wd/hub',
+        level: 'INFO',
+        test_run_uuid: '16034893-18ff-498b-a349-6343d503c573'
+      }
+    ]
+  },
+  {
+    event_type: 'LogCreated',
+    logs: [
+      {
+        testFrameworkName: 'pytest',
+        testFrameworkVersion: '8.2.2',
+        testFrameworkState: 'INIT_TEST',
+        timestamp: '2026-10-01T18:02:26.799Z',
+        uuid: '16034893-18ff-498b-a349-6343d503c573',
+        kind: 'TEST_LOG',
+        message: "2026-10-01T18:02:29Z [bstack_utils.helper][INFO] - Sent EDS event 'DriverInitFailure' | Status 200",
+        level: 'INFO',
+        test_run_uuid: '16034893-18ff-498b-a349-6343d503c573'
+      }
+    ]
+  }
+] to 60817:0
+2026-10-01T18:02:29.643Z CLI info  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-10-01T18:02:29.680Z CLI info [testhub:request-queue-handler]  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  Added the event {
+  event_type: 'HookRunFinished',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'BEFORE_EACH',
+    framework: 'pytest',
+    uuid: '74f6e207-003e-410a-9403-5f6e1875010e',
+    name: 'setup',
+    result: 'failed',
+    test_run_id: '16034893-18ff-498b-a349-6343d503c573',
+    body: { lang: 'python', code: null },
+    scope: 'test_wikipedia_first_screen_SME_WIKI_001',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'smoke', 'test_wikipedia_sample.py', 'TestWikipediaSample' ],
+    file_name: 'smoke/test_wikipedia_sample.py',
+    location: 'smoke/test_wikipedia_sample.py',
+    vc_filepath: 'smoke/test_wikipedia_sample.py',
+    started_at: '2026-10-01T18:02:27.380Z',
+    finished_at: '2026-10-01T18:02:29.677Z'
+  },
+  logs: []
+} to 60817:0 (target=/api/v2/builds/vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk/batch)
+2026-10-01T18:02:29.684Z CLI info [testhub:request-queue-handler]  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  Added the event {
+  event_type: 'TestRunStarted',
+  test_run: {
+    type: 'test',
+    framework: 'pytest',
+    uuid: '16034893-18ff-498b-a349-6343d503c573',
+    name: 'test_wikipedia_first_screen_SME_WIKI_001',
+    body: {
+      lang: 'python',
+      code: '    def test_wikipedia_first_screen_SME_WIKI_001(self, request):\n' +
+        '        """\n' +
+        '        Verify the Wikipedia app launches and the Explore feed is visible.\n' +
+        '\n' +
+        '        Steps\n' +
+        '        -----\n' +
+        '        1. Obtain the driver injected by conftest (SDK) or local fixture.\n' +
+        '        2. Wait for the Search bar to appear — confirms the feed screen loaded.\n' +
+        '        3. Assert the Search bar hint text is "Search Wikipedia".\n' +
+        '        4. Assert the Explore bottom-nav tab is present.\n' +
+        '        5. Assert the feed RecyclerView is present.\n' +
+        '        """\n' +
+        '        # When run directly by pytest (not via Run_Local_Debugger_Wikipedia.py),\n' +
+        '        # request.node.driver may not be set — skip gracefully in that case.\n' +
+        '        if not hasattr(request.node, "driver") or request.node.driver is None:\n' +
+        '            pytest.skip("No driver injected — run via Run_Local_Debugger_Wikipedia.py "\n' +
+        '                        "or smoke/conftest.py")\n' +
+        '        driver = request.node.driver\n' +
+        '        session_id = driver.session_id\n' +
+        '\n' +
+        '        try:\n' +
+        '            wait = WebDriverWait(driver, 20)\n' +
+        '\n' +
+        '            # Step 2 — wait for search container\n' +
+        '            search_container = wait.until(\n' +
+        '                EC.presence_of_element_located(\n' +
+        '                    (AppiumBy.ID, self._SEARCH_CONTAINER_ID)\n' +
+        '                )\n' +
+        '            )\n' +
+        '            assert search_container is not None, (\n' +
+        '                "Search container not found — app may not have launched correctly"\n' +
+        '            )\n' +
+        '\n' +
+        '            # Step 3 — assert search hint text\n' +
+        '            search_hint = wait.until(\n' +
+        '                EC.presence_of_element_located(\n' +
+        '                    (AppiumBy.ANDROID_UIAUTOMATOR,\n' +
+        `                     f'new UiSelector().text("{self._SEARCH_HINT_TEXT}")')\n` +
+        '                )\n' +
+        '            )\n' +
+        '            actual_text = search_hint.text\n' +
+        '            assert actual_text == self._SEARCH_HINT_TEXT, (\n' +
+        `                f"Expected search hint '{self._SEARCH_HINT_TEXT}', got '{actual_text}'"\n` +
+        '            )\n' +
+        '\n' +
+        '            # Step 4 — assert Explore bottom-nav tab\n' +
+        '            explore_tab = wait.until(\n' +
+        '                EC.presence_of_element_located(\n' +
+        '                    (AppiumBy.ACCESSIBILITY_ID, self._EXPLORE_TAB_DESC)\n' +
+        '                )\n' +
+        '            )\n' +
+        '            assert explore_tab is not None, "Explore tab not found in bottom navigation"\n' +
+        '\n' +
+        '            # Step 5 — assert feed RecyclerView loaded\n' +
+        '            feed = wait.until(\n' +
+        '                EC.presence_of_element_located(\n' +
+        '                    (AppiumBy.ID, self._FEED_RECYCLER_ID)\n' +
+        '                )\n' +
+        '            )\n' +
+        '            assert feed is not None, "Feed RecyclerView not found — feed may not have loaded"\n' +
+        '\n' +
+        '            print("PASS: Wikipedia first screen validated successfully")\n' +
+        '            if _HAS_INITIALIZER:\n' +
+        '                Initializer.update_session_status(\n' +
+        '                    session_id, "passed", "Wikipedia first screen validated"\n' +
+        '                )\n' +
+        '\n' +
+        '        except Exception as e:\n' +
+        '            print(f"An error occurred: {e}")\n' +
+        '            if _HAS_INITIALIZER:\n' +
+        '                Initializer.update_session_status(\n' +
+        '                    session_id, "failed",\n' +
+        '                    f"Wikipedia first screen test failed: {e}"\n' +
+        '                )\n' +
+        '            raise\n' +
+        '\n' +
+        '        finally:\n' +
+        '            if _HAS_INITIALIZER:\n' +
+        '                session_url = Initializer.get_session_url(session_id)\n' +
+        '            else:\n' +
+        '                session_url = (\n' +
+        '                    f"Dashboard: https://app-automate.browserstack.com"\n' +
+        '                    f"/dashboard/v2/sessions/{session_id}"\n' +
+        '                )\n' +
+        '            print(f"Test session URL: {session_url}")\n'
+    },
+    identifier: 'test_wikipedia_first_screen_SME_WIKI_001',
+    scope: 'test_wikipedia_first_screen_SME_WIKI_001',
+    scopes: [ 'smoke', 'test_wikipedia_sample.py', 'TestWikipediaSample' ],
+    file_name: 'smoke/test_wikipedia_sample.py',
+    vc_filepath: 'smoke/test_wikipedia_sample.py',
+    location: 'smoke/test_wikipedia_sample.py',
+    result: 'pending',
+    duration_in_ms: null,
+    started_at: '2026-10-01T18:02:29.679Z',
+    failure: undefined,
+    failure_type: undefined,
+    failure_reason: null,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: {
+      rerun_name: 'smoke/test_wikipedia_sample.py::TestWikipediaSample::test_wikipedia_first_screen_SME_WIKI_001'
+    },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: false,
+      app_automate: true,
+      lts: false
+    }
+  },
+  logs: []
+} to 60817:0 (target=/api/v2/builds/vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk/batch)
+2026-10-01T18:02:29.686Z CLI info [testhub:request-queue-handler]  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  Added the event {
+  event_type: 'LogCreated',
+  logs: [
+    {
+      testFrameworkName: 'pytest',
+      testFrameworkVersion: '8.2.2',
+      testFrameworkState: 'INIT_TEST',
+      timestamp: '2026-10-01T18:02:26.799Z',
+      uuid: '16034893-18ff-498b-a349-6343d503c573',
+      kind: 'TEST_LOG',
+      message: '\x1B[31mE\x1B[0m',
+      level: 'INFO',
+      test_run_uuid: '16034893-18ff-498b-a349-6343d503c573'
+    }
+  ]
+} to 60817:0 (target=/api/v2/builds/vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk/logs/batch)
+2026-10-01T18:02:29.690Z CLI info [testhub:request-queue-handler]  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  Added the event {
+  event_type: 'TestRunFinished',
+  test_run: {
+    type: 'test',
+    framework: 'pytest',
+    uuid: '16034893-18ff-498b-a349-6343d503c573',
+    name: 'test_wikipedia_first_screen_SME_WIKI_001',
+    body: {
+      lang: 'python',
+      code: '    def test_wikipedia_first_screen_SME_WIKI_001(self, request):\n' +
+        '        """\n' +
+        '        Verify the Wikipedia app launches and the Explore feed is visible.\n' +
+        '\n' +
+        '        Steps\n' +
+        '        -----\n' +
+        '        1. Obtain the driver injected by conftest (SDK) or local fixture.\n' +
+        '        2. Wait for the Search bar to appear — confirms the feed screen loaded.\n' +
+        '        3. Assert the Search bar hint text is "Search Wikipedia".\n' +
+        '        4. Assert the Explore bottom-nav tab is present.\n' +
+        '        5. Assert the feed RecyclerView is present.\n' +
+        '        """\n' +
+        '        # When run directly by pytest (not via Run_Local_Debugger_Wikipedia.py),\n' +
+        '        # request.node.driver may not be set — skip gracefully in that case.\n' +
+        '        if not hasattr(request.node, "driver") or request.node.driver is None:\n' +
+        '            pytest.skip("No driver injected — run via Run_Local_Debugger_Wikipedia.py "\n' +
+        '                        "or smoke/conftest.py")\n' +
+        '        driver = request.node.driver\n' +
+        '        session_id = driver.session_id\n' +
+        '\n' +
+        '        try:\n' +
+        '            wait = WebDriverWait(driver, 20)\n' +
+        '\n' +
+        '            # Step 2 — wait for search container\n' +
+        '            search_container = wait.until(\n' +
+        '                EC.presence_of_element_located(\n' +
+        '                    (AppiumBy.ID, self._SEARCH_CONTAINER_ID)\n' +
+        '                )\n' +
+        '            )\n' +
+        '            assert search_container is not None, (\n' +
+        '                "Search container not found — app may not have launched correctly"\n' +
+        '            )\n' +
+        '\n' +
+        '            # Step 3 — assert search hint text\n' +
+        '            search_hint = wait.until(\n' +
+        '                EC.presence_of_element_located(\n' +
+        '                    (AppiumBy.ANDROID_UIAUTOMATOR,\n' +
+        `                     f'new UiSelector().text("{self._SEARCH_HINT_TEXT}")')\n` +
+        '                )\n' +
+        '            )\n' +
+        '            actual_text = search_hint.text\n' +
+        '            assert actual_text == self._SEARCH_HINT_TEXT, (\n' +
+        `                f"Expected search hint '{self._SEARCH_HINT_TEXT}', got '{actual_text}'"\n` +
+        '            )\n' +
+        '\n' +
+        '            # Step 4 — assert Explore bottom-nav tab\n' +
+        '            explore_tab = wait.until(\n' +
+        '                EC.presence_of_element_located(\n' +
+        '                    (AppiumBy.ACCESSIBILITY_ID, self._EXPLORE_TAB_DESC)\n' +
+        '                )\n' +
+        '            )\n' +
+        '            assert explore_tab is not None, "Explore tab not found in bottom navigation"\n' +
+        '\n' +
+        '            # Step 5 — assert feed RecyclerView loaded\n' +
+        '            feed = wait.until(\n' +
+        '                EC.presence_of_element_located(\n' +
+        '                    (AppiumBy.ID, self._FEED_RECYCLER_ID)\n' +
+        '                )\n' +
+        '            )\n' +
+        '            assert feed is not None, "Feed RecyclerView not found — feed may not have loaded"\n' +
+        '\n' +
+        '            print("PASS: Wikipedia first screen validated successfully")\n' +
+        '            if _HAS_INITIALIZER:\n' +
+        '                Initializer.update_session_status(\n' +
+        '                    session_id, "passed", "Wikipedia first screen validated"\n' +
+        '                )\n' +
+        '\n' +
+        '        except Exception as e:\n' +
+        '            print(f"An error occurred: {e}")\n' +
+        '            if _HAS_INITIALIZER:\n' +
+        '                Initializer.update_session_status(\n' +
+        '                    session_id, "failed",\n' +
+        '                    f"Wikipedia first screen test failed: {e}"\n' +
+        '                )\n' +
+        '            raise\n' +
+        '\n' +
+        '        finally:\n' +
+        '            if _HAS_INITIALIZER:\n' +
+        '                session_url = Initializer.get_session_url(session_id)\n' +
+        '            else:\n' +
+        '                session_url = (\n' +
+        '                    f"Dashboard: https://app-automate.browserstack.com"\n' +
+        '                    f"/dashboard/v2/sessions/{session_id}"\n' +
+        '                )\n' +
+        '            print(f"Test session URL: {session_url}")\n'
+    },
+    identifier: 'test_wikipedia_first_screen_SME_WIKI_001',
+    scope: 'test_wikipedia_first_screen_SME_WIKI_001',
+    scopes: [ 'smoke', 'test_wikipedia_sample.py', 'TestWikipediaSample' ],
+    file_name: 'smoke/test_wikipedia_sample.py',
+    vc_filepath: 'smoke/test_wikipedia_sample.py',
+    location: 'smoke/test_wikipedia_sample.py',
+    result: 'failed',
+    duration_in_ms: 7,
+    started_at: '2026-10-01T18:02:29.679Z',
+    finished_at: '2026-10-01T18:02:29.686Z',
+    failure: [ [Object] ],
+    failure_type: 'UnhandledError',
+    failure_reason: null,
+    retry_of: null,
+    custom_metadata: {},
+    tags: [],
+    customRerunParam: {
+      rerun_name: 'smoke/test_wikipedia_sample.py::TestWikipediaSample::test_wikipedia_first_screen_SME_WIKI_001'
+    },
+    hooks: [ '74f6e207-003e-410a-9403-5f6e1875010e' ],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: false,
+      app_automate: true,
+      lts: false
+    }
+  },
+  logs: []
+} to 60817:0 (target=/api/v2/builds/vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk/batch)
+2026-10-01T18:02:29.691Z CLI info [testhub:request-queue-handler]  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  Added the event {
+  event_type: 'HookRunStarted',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'AFTER_EACH',
+    framework: 'pytest',
+    uuid: 'c8f88f97-862f-4527-92ba-5301b0379c04',
+    name: 'teardown',
+    result: 'pending',
+    test_run_id: '16034893-18ff-498b-a349-6343d503c573',
+    body: { lang: 'python', code: null },
+    scope: 'test_wikipedia_first_screen_SME_WIKI_001',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'smoke', 'test_wikipedia_sample.py', 'TestWikipediaSample' ],
+    file_name: 'smoke/test_wikipedia_sample.py',
+    location: 'smoke/test_wikipedia_sample.py',
+    vc_filepath: 'smoke/test_wikipedia_sample.py',
+    started_at: '2026-10-01T18:02:29.689Z'
+  },
+  logs: []
+} to 60817:0 (target=/api/v2/builds/vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk/batch)
+2026-10-01T18:02:29.695Z CLI info [testhub:request-queue-handler]  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  Added the event {
+  event_type: 'HookRunFinished',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'AFTER_EACH',
+    framework: 'pytest',
+    uuid: 'c8f88f97-862f-4527-92ba-5301b0379c04',
+    name: 'teardown',
+    result: 'passed',
+    test_run_id: '16034893-18ff-498b-a349-6343d503c573',
+    body: { lang: 'python', code: null },
+    scope: 'test_wikipedia_first_screen_SME_WIKI_001',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'smoke', 'test_wikipedia_sample.py', 'TestWikipediaSample' ],
+    file_name: 'smoke/test_wikipedia_sample.py',
+    location: 'smoke/test_wikipedia_sample.py',
+    vc_filepath: 'smoke/test_wikipedia_sample.py',
+    started_at: '2026-10-01T18:02:29.689Z',
+    finished_at: '2026-10-01T18:02:29.693Z'
+  },
+  logs: []
+} to 60817:0 (target=/api/v2/builds/vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk/batch)
+2026-10-01T18:02:29.697Z CLI info [testhub:request-queue-handler]  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  Added the event {
+  event_type: 'LogCreated',
+  logs: [
+    {
+      testFrameworkName: 'pytest',
+      testFrameworkVersion: '8.2.2',
+      testFrameworkState: 'INIT_TEST',
+      timestamp: '2026-10-01T18:02:26.799Z',
+      uuid: '16034893-18ff-498b-a349-6343d503c573',
+      kind: 'TEST_LOG',
+      message: '\x1B[31m                                                                                                                                         [100%]\x1B[0m',
+      level: 'INFO',
+      test_run_uuid: '16034893-18ff-498b-a349-6343d503c573'
+    }
+  ]
+} to 60817:0 (target=/api/v2/builds/vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk/logs/batch)
+2026-10-01T18:02:29.821Z CLI info  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  [PRODUCTION] Making GET request to https://api.browserstack.com
+2026-10-01T18:02:29.824Z CLI info  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-10-01T18:02:29.824Z CLI info  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-10-01T18:02:31.087Z CLI info  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  [PRODUCTION] Making PUT request to https://collector-observability.browserstack.com
+2026-10-01T18:02:32.018Z CLI info [testhub:module]  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  stopBuild: vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk request={"finished_at":"2026-10-01T18:02:29.821Z","finished_metadata":[],"custom_metadata":null} response={"data":""}
+2026-10-01T18:02:32.019Z CLI info  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  [PRODUCTION] Making POST request to https://api.browserstack.com
+2026-10-01T18:02:32.882Z CLI info [TEST REPORTING AND ANALYTICS:module]  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  Visit https://automation.browserstack.com/builds/vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk to view build report, insights, and many more debugging information all at one place!
+2026-10-01T18:02:32.937Z CLI info  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  [PRODUCTION] Making POST request to https://eds.browserstack.com
+2026-10-01T18:03:02.897Z CLI info [main]  [vplnjw0bob5zbyjwkqweypf4ahis9fwzzipfjmtk]  [234d3441-f506-4aa3-9379-41705f02dc29]  Received graceful signal termination (SIGTERM), performing cleanup
+2026-10-01T18:04:29.470Z CLI info    Config : {"userName":"****","accessKey":"****","framework":"pytest","app":"bs://2cb25d26a5b87168117ec49799f3cc5e51756e61","platforms":[{"platformName":"android","deviceName":"Samsung Galaxy S23","platformVersion":"13.0"}],"browserstackLocal":false,"sessionName":"test_wikipedia_sample","buildName":"MEA | Wikipedia | android","projectName":"AAFES-MEA","buildIdentifier":"1","debug":true,"networkLogs":false,"appProfiling":false,"disableAutoCaptureLogs":true,"percy":false,"percyCaptureMode":"manual","interactiveDebugging":true,"selfHeal":false,"aiAuthoring":false,"appium:newCommandTimeout":400,"idleTimeout":400,"proxyUnawareApp":true}
+2026-10-01T18:04:29.473Z CLI info    Should start debug utility: undefined
+2026-10-01T18:04:29.513Z CLI info [testhub:module]   [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Starting testhub from 62748:0
+2026-10-01T18:04:30.143Z CLI info   [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  [PRODUCTION] Making POST request to https://sdk.browserstack.com
+2026-10-01T18:04:30.145Z CLI info   [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  [PRODUCTION] Making GET request to https://hub.browserstack.com
+2026-10-01T18:04:30.341Z CLI info   [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  [PRODUCTION] Making GET request to https://hub-aps.browserstack.com
+2026-10-01T18:04:30.341Z CLI info   [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  [PRODUCTION] Making GET request to https://hub-euw.browserstack.com
+2026-10-01T18:04:30.342Z CLI info   [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  [PRODUCTION] Making GET request to https://hub-apse.browserstack.com
+2026-10-01T18:04:31.816Z CLI info [testhub:module]   [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  startBuild: response=3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9
+2026-10-01T18:04:31.819Z CLI info  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  [PRODUCTION] Making POST request to https://api.browserstack.com
+2026-10-01T18:04:32.910Z CLI info [appautomate:service]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Using app: bs://2cb25d26a5b87168117ec49799f3cc5e51756e61
+2026-10-01T18:04:34.628Z CLI info [testhub:request-queue-handler]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Added the event {
+  event_type: 'HookRunStarted',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'BEFORE_EACH',
+    framework: 'pytest',
+    uuid: '516c18c9-2f9a-4bee-9e06-767150b2622c',
+    name: 'setup',
+    result: 'pending',
+    test_run_id: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+    body: { lang: 'python', code: null },
+    scope: 'test_wikipedia_first_screen_SME_WIKI_001',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'smoke', 'test_wikipedia_sample.py', 'TestWikipediaSample' ],
+    file_name: 'smoke/test_wikipedia_sample.py',
+    location: 'smoke/test_wikipedia_sample.py',
+    vc_filepath: 'smoke/test_wikipedia_sample.py',
+    started_at: '2026-10-01T18:04:34.622Z'
+  },
+  logs: []
+} to 62748:0 (target=/api/v2/builds/3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9/batch)
+2026-10-01T18:04:34.631Z CLI info [testhub:request-queue-handler]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Added the event {
+  event_type: 'LogCreated',
+  logs: [
+    {
+      testFrameworkName: 'pytest',
+      testFrameworkVersion: '8.2.2',
+      testFrameworkState: 'INIT_TEST',
+      timestamp: '2026-10-01T18:04:34.079Z',
+      uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+      kind: 'TEST_LOG',
+      message: '2026-10-01T18:04:34Z [bstack11lll1l111l_opy_][INFO] - Remote Server Address being passed as : https://[REDACTED]:[REDACTED]@hub-cloud.browserstack.com/wd/hub',
+      level: 'INFO',
+      test_run_uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143'
+    }
+  ]
+} to 62748:0 (target=/api/v2/builds/3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9/logs/batch)
+2026-10-01T18:04:34.633Z CLI info [sdk:service]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Driver initialized as primary driver: platformIndex=0
+2026-10-01T18:04:34.637Z CLI info [testhub:request-queue-handler]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Added the event {
+  event_type: 'LogCreated',
+  logs: [
+    {
+      testFrameworkName: 'pytest',
+      testFrameworkVersion: '8.2.2',
+      testFrameworkState: 'INIT_TEST',
+      timestamp: '2026-10-01T18:04:34.079Z',
+      uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+      kind: 'TEST_LOG',
+      message: '2026-10-01T18:04:34Z [bstack11lll1l111l_opy_][INFO] - Completed setup!',
+      level: 'INFO',
+      test_run_uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143'
+    }
+  ]
+} to 62748:0 (target=/api/v2/builds/3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9/logs/batch)
+2026-10-01T18:04:34.637Z CLI info [testhub:request-queue-handler]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Added the event {
+  event_type: 'LogCreated',
+  logs: [
+    {
+      testFrameworkName: 'pytest',
+      testFrameworkVersion: '8.2.2',
+      testFrameworkState: 'INIT_TEST',
+      timestamp: '2026-10-01T18:04:34.079Z',
+      uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+      kind: 'TEST_LOG',
+      message: "2026-10-01T18:04:34Z [bstack11lll1l111l_opy_][INFO] - driver_rank={driver_rank} driver.{method_name} platform_index={f.platform_index}: args={args} kwargs={'command_executor': 'https://hub-aps.browserstack.com/wd/hub', 'options': <appium.options.common.base.AppiumOptions object at 0x10b031f40>, 'keep_alive': True, 'file_detector': None}",
+      level: 'INFO',
+      test_run_uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143'
+    }
+  ]
+} to 62748:0 (target=/api/v2/builds/3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9/logs/batch)
+2026-10-01T18:04:34.640Z CLI info [testhub:request-queue-handler]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Added the event {
+  event_type: 'LogCreated',
+  logs: [
+    {
+      testFrameworkName: 'pytest',
+      testFrameworkVersion: '8.2.2',
+      testFrameworkState: 'INIT_TEST',
+      timestamp: '2026-10-01T18:04:34.079Z',
+      uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+      kind: 'TEST_LOG',
+      message: '2026-10-01T18:04:34Z [bstack11lll1l111l_opy_][WARNING] - hub_url=https://hub-aps.browserstack.com/wd/hub',
+      level: 'INFO',
+      test_run_uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143'
+    }
+  ]
+} to 62748:0 (target=/api/v2/builds/3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9/logs/batch)
+2026-10-01T18:04:34.642Z CLI info [local:module]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  initSession: localIdentifier=undefined pid=undefined
+2026-10-01T18:04:35.820Z CLI info [testhub:request-queue-handler]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Processing batch event [
+  {
+    event_type: 'HookRunStarted',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'BEFORE_EACH',
+      framework: 'pytest',
+      uuid: '516c18c9-2f9a-4bee-9e06-767150b2622c',
+      name: 'setup',
+      result: 'pending',
+      test_run_id: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+      body: { lang: 'python', code: null },
+      scope: 'test_wikipedia_first_screen_SME_WIKI_001',
+      custom_metadata: {},
+      tags: [],
+      scopes: [ 'smoke', 'test_wikipedia_sample.py', 'TestWikipediaSample' ],
+      file_name: 'smoke/test_wikipedia_sample.py',
+      location: 'smoke/test_wikipedia_sample.py',
+      vc_filepath: 'smoke/test_wikipedia_sample.py',
+      started_at: '2026-10-01T18:04:34.622Z'
+    },
+    logs: []
+  }
+] to 62748:0
+2026-10-01T18:04:35.820Z CLI info  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-10-01T18:04:36.741Z CLI info [testhub:request-queue-handler]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Processing batch event [
+  {
+    event_type: 'LogCreated',
+    logs: [
+      {
+        testFrameworkName: 'pytest',
+        testFrameworkVersion: '8.2.2',
+        testFrameworkState: 'INIT_TEST',
+        timestamp: '2026-10-01T18:04:34.079Z',
+        uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+        kind: 'TEST_LOG',
+        message: '2026-10-01T18:04:34Z [bstack11lll1l111l_opy_][INFO] - Remote Server Address being passed as : https://[REDACTED]:[REDACTED]@hub-cloud.browserstack.com/wd/hub',
+        level: 'INFO',
+        test_run_uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143'
+      }
+    ]
+  },
+  {
+    event_type: 'LogCreated',
+    logs: [
+      {
+        testFrameworkName: 'pytest',
+        testFrameworkVersion: '8.2.2',
+        testFrameworkState: 'INIT_TEST',
+        timestamp: '2026-10-01T18:04:34.079Z',
+        uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+        kind: 'TEST_LOG',
+        message: '2026-10-01T18:04:34Z [bstack11lll1l111l_opy_][INFO] - Completed setup!',
+        level: 'INFO',
+        test_run_uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143'
+      }
+    ]
+  },
+  {
+    event_type: 'LogCreated',
+    logs: [
+      {
+        testFrameworkName: 'pytest',
+        testFrameworkVersion: '8.2.2',
+        testFrameworkState: 'INIT_TEST',
+        timestamp: '2026-10-01T18:04:34.079Z',
+        uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+        kind: 'TEST_LOG',
+        message: "2026-10-01T18:04:34Z [bstack11lll1l111l_opy_][INFO] - driver_rank={driver_rank} driver.{method_name} platform_index={f.platform_index}: args={args} kwargs={'command_executor': 'https://hub-aps.browserstack.com/wd/hub', 'options': <appium.options.common.base.AppiumOptions object at 0x10b031f40>, 'keep_alive': True, 'file_detector': None}",
+        level: 'INFO',
+        test_run_uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143'
+      }
+    ]
+  },
+  {
+    event_type: 'LogCreated',
+    logs: [
+      {
+        testFrameworkName: 'pytest',
+        testFrameworkVersion: '8.2.2',
+        testFrameworkState: 'INIT_TEST',
+        timestamp: '2026-10-01T18:04:34.079Z',
+        uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+        kind: 'TEST_LOG',
+        message: '2026-10-01T18:04:34Z [bstack11lll1l111l_opy_][WARNING] - hub_url=https://hub-aps.browserstack.com/wd/hub',
+        level: 'INFO',
+        test_run_uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143'
+      }
+    ]
+  }
+] to 62748:0
+2026-10-01T18:04:36.741Z CLI info  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-10-01T18:04:50.304Z CLI info [testhub:request-queue-handler]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Added the event {
+  event_type: 'CBTSessionCreated',
+  test_run: {
+    uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+    integrations: { browserstack: [Object] }
+  }
+} to 62748:0 (target=/api/v2/builds/3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9/batch)
+2026-10-01T18:04:50.310Z CLI info [testhub:request-queue-handler]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Added the event {
+  event_type: 'HookRunFinished',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'BEFORE_EACH',
+    framework: 'pytest',
+    uuid: '516c18c9-2f9a-4bee-9e06-767150b2622c',
+    name: 'setup',
+    result: 'passed',
+    test_run_id: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+    body: { lang: 'python', code: null },
+    scope: 'test_wikipedia_first_screen_SME_WIKI_001',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'smoke', 'test_wikipedia_sample.py', 'TestWikipediaSample' ],
+    file_name: 'smoke/test_wikipedia_sample.py',
+    location: 'smoke/test_wikipedia_sample.py',
+    vc_filepath: 'smoke/test_wikipedia_sample.py',
+    started_at: '2026-10-01T18:04:34.622Z',
+    finished_at: '2026-10-01T18:04:50.308Z'
+  },
+  logs: []
+} to 62748:0 (target=/api/v2/builds/3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9/batch)
+2026-10-01T18:04:51.330Z CLI info [testhub:request-queue-handler]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Added the event {
+  event_type: 'TestRunStarted',
+  test_run: {
+    type: 'test',
+    framework: 'pytest',
+    uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+    name: 'test_wikipedia_first_screen_SME_WIKI_001',
+    body: {
+      lang: 'python',
+      code: '    def test_wikipedia_first_screen_SME_WIKI_001(self, request):\n' +
+        '        """\n' +
+        '        Verify the Wikipedia app launches and the Explore feed is visible.\n' +
+        '\n' +
+        '        Steps\n' +
+        '        -----\n' +
+        '        1. Obtain the driver injected by conftest (SDK) or local fixture.\n' +
+        '        2. Wait for the Search bar to appear — confirms the feed screen loaded.\n' +
+        '        3. Assert the Search bar hint text is "Search Wikipedia".\n' +
+        '        4. Assert the Explore bottom-nav tab is present.\n' +
+        '        5. Assert the feed RecyclerView is present.\n' +
+        '        """\n' +
+        '        # When run directly by pytest (not via Run_Local_Debugger_Wikipedia.py),\n' +
+        '        # request.node.driver may not be set — skip gracefully in that case.\n' +
+        '        if not hasattr(request.node, "driver") or request.node.driver is None:\n' +
+        '            pytest.skip("No driver injected — run via Run_Local_Debugger_Wikipedia.py "\n' +
+        '                        "or smoke/conftest.py")\n' +
+        '        driver = request.node.driver\n' +
+        '        session_id = driver.session_id\n' +
+        '\n' +
+        '        try:\n' +
+        '            wait = WebDriverWait(driver, 20)\n' +
+        '\n' +
+        '            # Step 2 — wait for search container\n' +
+        '            search_container = wait.until(\n' +
+        '                EC.presence_of_element_located(\n' +
+        '                    (AppiumBy.ID, self._SEARCH_CONTAINER_ID)\n' +
+        '                )\n' +
+        '            )\n' +
+        '            assert search_container is not None, (\n' +
+        '                "Search container not found — app may not have launched correctly"\n' +
+        '            )\n' +
+        '\n' +
+        '            # Step 3 — assert search hint text\n' +
+        '            search_hint = wait.until(\n' +
+        '                EC.presence_of_element_located(\n' +
+        '                    (AppiumBy.ANDROID_UIAUTOMATOR,\n' +
+        `                     f'new UiSelector().text("{self._SEARCH_HINT_TEXT}")')\n` +
+        '                )\n' +
+        '            )\n' +
+        '            actual_text = search_hint.text\n' +
+        '            assert actual_text == self._SEARCH_HINT_TEXT, (\n' +
+        `                f"Expected search hint '{self._SEARCH_HINT_TEXT}', got '{actual_text}'"\n` +
+        '            )\n' +
+        '\n' +
+        '            # Step 4 — assert Explore bottom-nav tab\n' +
+        '            explore_tab = wait.until(\n' +
+        '                EC.presence_of_element_located(\n' +
+        '                    (AppiumBy.ACCESSIBILITY_ID, self._EXPLORE_TAB_DESC)\n' +
+        '                )\n' +
+        '            )\n' +
+        '            assert explore_tab is not None, "Explore tab not found in bottom navigation"\n' +
+        '\n' +
+        '            # Step 5 — assert feed RecyclerView loaded\n' +
+        '            feed = wait.until(\n' +
+        '                EC.presence_of_element_located(\n' +
+        '                    (AppiumBy.ID, self._FEED_RECYCLER_ID)\n' +
+        '                )\n' +
+        '            )\n' +
+        '            assert feed is not None, "Feed RecyclerView not found — feed may not have loaded"\n' +
+        '\n' +
+        '            print("PASS: Wikipedia first screen validated successfully")\n' +
+        '            if _HAS_INITIALIZER:\n' +
+        '                Initializer.update_session_status(\n' +
+        '                    session_id, "passed", "Wikipedia first screen validated"\n' +
+        '                )\n' +
+        '\n' +
+        '        except Exception as e:\n' +
+        '            print(f"An error occurred: {e}")\n' +
+        '            if _HAS_INITIALIZER:\n' +
+        '                Initializer.update_session_status(\n' +
+        '                    session_id, "failed",\n' +
+        '                    f"Wikipedia first screen test failed: {e}"\n' +
+        '                )\n' +
+        '            raise\n' +
+        '\n' +
+        '        finally:\n' +
+        '            if _HAS_INITIALIZER:\n' +
+        '                session_url = Initializer.get_session_url(session_id)\n' +
+        '            else:\n' +
+        '                session_url = (\n' +
+        '                    f"Dashboard: https://app-automate.browserstack.com"\n' +
+        '                    f"/dashboard/v2/sessions/{session_id}"\n' +
+        '                )\n' +
+        '            print(f"Test session URL: {session_url}")\n'
+    },
+    identifier: 'test_wikipedia_first_screen_SME_WIKI_001',
+    scope: 'test_wikipedia_first_screen_SME_WIKI_001',
+    scopes: [ 'smoke', 'test_wikipedia_sample.py', 'TestWikipediaSample' ],
+    file_name: 'smoke/test_wikipedia_sample.py',
+    vc_filepath: 'smoke/test_wikipedia_sample.py',
+    location: 'smoke/test_wikipedia_sample.py',
+    result: 'pending',
+    duration_in_ms: null,
+    started_at: '2026-10-01T18:04:50.309Z',
+    failure: undefined,
+    failure_type: undefined,
+    failure_reason: null,
+    retry_of: null,
+    custom_metadata: undefined,
+    tags: [],
+    customRerunParam: {
+      rerun_name: 'smoke/test_wikipedia_sample.py::TestWikipediaSample::test_wikipedia_first_screen_SME_WIKI_001'
+    },
+    hooks: [],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: false,
+      app_automate: true,
+      lts: false
+    },
+    integrations: { browserstack: [Object] }
+  },
+  logs: []
+} to 62748:0 (target=/api/v2/builds/3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9/batch)
+2026-10-01T18:04:51.828Z CLI info [testhub:request-queue-handler]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Processing batch event [
+  {
+    event_type: 'CBTSessionCreated',
+    test_run: {
+      uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+      integrations: {
+        browserstack: {
+          product: 'app-automate',
+          session_id: '8b7ce209f7864b1016f03645476237499a3eb75e',
+          capabilities: {
+            platform: 'LINUX',
+            webStorageEnabled: false,
+            takesScreenshot: true,
+            javascriptEnabled: true,
+            databaseEnabled: false,
+            networkConnectionEnabled: true,
+            locationContextEnabled: false,
+            warnings: {},
+            desired: {
+              platformName: 'Android',
+              'bstack:options': {
+                hostName: 'giteshkhare-G4NQNQ7007',
+                buildIdentifier: '1'
+              },
+              'goog:chromeOptions': {},
+              newCommandTimeout: 0,
+              deviceName: 'Samsung Galaxy S23',
+              chromedriverPorts: [ [ 18133, 18143 ] ],
+              chromedriverArgs: [ '--adb-port=5038' ],
+              automationName: 'UiAutomator2',
+              systemPort: 8203,
+              bundleID: 'org.wikipedia.alpha',
+              bundleId: 'org.wikipedia.alpha',
+              skipServerInstallation: true,
+              udid: 'RZCW40CY2FR',
+              appPackage: 'org.wikipedia.alpha',
+              appActivity: 'org.wikipedia.main.MainActivity',
+              nativeWebScreenshot: true,
+              disableSuppressAccessibilityService: true,
+              platformVersion: '13.0',
+              noReset: true
+            },
+            platformName: 'Android',
+            'bstack:options': {
+              hostName: 'giteshkhare-G4NQNQ7007',
+              buildIdentifier: '1'
+            },
+            'goog:chromeOptions': {},
+            newCommandTimeout: 0,
+            deviceName: 'RZCW40CY2FR',
+            chromedriverPorts: [ [ 18133, 18143 ] ],
+            chromedriverArgs: [ '--adb-port=5038' ],
+            automationName: 'UiAutomator2',
+            systemPort: 8203,
+            bundleID: 'org.wikipedia.alpha',
+            bundleId: 'org.wikipedia.alpha',
+            skipServerInstallation: true,
+            udid: 'RZCW40CY2FR',
+            appPackage: 'org.wikipedia.alpha',
+            appActivity: 'org.wikipedia.main.MainActivity',
+            nativeWebScreenshot: true,
+            disableSuppressAccessibilityService: true,
+            platformVersion: '13',
+            noReset: true,
+            deviceUDID: 'RZCW40CY2FR',
+            deviceApiLevel: 33,
+            deviceScreenSize: '1080x2340',
+            deviceScreenDensity: 480,
+            deviceModel: 'SM-S911B',
+            deviceManufacturer: 'samsung',
+            pixelRatio: 3,
+            statBarHeight: 81,
+            viewportRect: { left: 0, top: 81, width: 1080, height: 2034 },
+            optimalHubUrl: 'hub-aps.browserstack.com'
+          },
+          platform: 'android',
+          platform_version: '13',
+          browser: undefined,
+          browser_version: undefined,
+          device_name: 'RZCW40CY2FR'
+        }
+      }
+    }
+  },
+  {
+    event_type: 'HookRunFinished',
+    hook_run: {
+      type: 'hook',
+      hook_type: 'BEFORE_EACH',
+      framework: 'pytest',
+      uuid: '516c18c9-2f9a-4bee-9e06-767150b2622c',
+      name: 'setup',
+      result: 'passed',
+      test_run_id: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+      body: { lang: 'python', code: null },
+      scope: 'test_wikipedia_first_screen_SME_WIKI_001',
+      custom_metadata: {},
+      tags: [],
+      scopes: [ 'smoke', 'test_wikipedia_sample.py', 'TestWikipediaSample' ],
+      file_name: 'smoke/test_wikipedia_sample.py',
+      location: 'smoke/test_wikipedia_sample.py',
+      vc_filepath: 'smoke/test_wikipedia_sample.py',
+      started_at: '2026-10-01T18:04:34.622Z',
+      finished_at: '2026-10-01T18:04:50.308Z'
+    },
+    logs: []
+  },
+  {
+    event_type: 'TestRunStarted',
+    test_run: {
+      type: 'test',
+      framework: 'pytest',
+      uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+      name: 'test_wikipedia_first_screen_SME_WIKI_001',
+      body: {
+        lang: 'python',
+        code: '    def test_wikipedia_first_screen_SME_WIKI_001(self, request):\n' +
+          '        """\n' +
+          '        Verify the Wikipedia app launches and the Explore feed is visible.\n' +
+          '\n' +
+          '        Steps\n' +
+          '        -----\n' +
+          '        1. Obtain the driver injected by conftest (SDK) or local fixture.\n' +
+          '        2. Wait for the Search bar to appear — confirms the feed screen loaded.\n' +
+          '        3. Assert the Search bar hint text is "Search Wikipedia".\n' +
+          '        4. Assert the Explore bottom-nav tab is present.\n' +
+          '        5. Assert the feed RecyclerView is present.\n' +
+          '        """\n' +
+          '        # When run directly by pytest (not via Run_Local_Debugger_Wikipedia.py),\n' +
+          '        # request.node.driver may not be set — skip gracefully in that case.\n' +
+          '        if not hasattr(request.node, "driver") or request.node.driver is None:\n' +
+          '            pytest.skip("No driver injected — run via Run_Local_Debugger_Wikipedia.py "\n' +
+          '                        "or smoke/conftest.py")\n' +
+          '        driver = request.node.driver\n' +
+          '        session_id = driver.session_id\n' +
+          '\n' +
+          '        try:\n' +
+          '            wait = WebDriverWait(driver, 20)\n' +
+          '\n' +
+          '            # Step 2 — wait for search container\n' +
+          '            search_container = wait.until(\n' +
+          '                EC.presence_of_element_located(\n' +
+          '                    (AppiumBy.ID, self._SEARCH_CONTAINER_ID)\n' +
+          '                )\n' +
+          '            )\n' +
+          '            assert search_container is not None, (\n' +
+          '                "Search container not found — app may not have launched correctly"\n' +
+          '            )\n' +
+          '\n' +
+          '            # Step 3 — assert search hint text\n' +
+          '            search_hint = wait.until(\n' +
+          '                EC.presence_of_element_located(\n' +
+          '                    (AppiumBy.ANDROID_UIAUTOMATOR,\n' +
+          `                     f'new UiSelector().text("{self._SEARCH_HINT_TEXT}")')\n` +
+          '                )\n' +
+          '            )\n' +
+          '            actual_text = search_hint.text\n' +
+          '            assert actual_text == self._SEARCH_HINT_TEXT, (\n' +
+          `                f"Expected search hint '{self._SEARCH_HINT_TEXT}', got '{actual_text}'"\n` +
+          '            )\n' +
+          '\n' +
+          '            # Step 4 — assert Explore bottom-nav tab\n' +
+          '            explore_tab = wait.until(\n' +
+          '                EC.presence_of_element_located(\n' +
+          '                    (AppiumBy.ACCESSIBILITY_ID, self._EXPLORE_TAB_DESC)\n' +
+          '                )\n' +
+          '            )\n' +
+          '            assert explore_tab is not None, "Explore tab not found in bottom navigation"\n' +
+          '\n' +
+          '            # Step 5 — assert feed RecyclerView loaded\n' +
+          '            feed = wait.until(\n' +
+          '                EC.presence_of_element_located(\n' +
+          '                    (AppiumBy.ID, self._FEED_RECYCLER_ID)\n' +
+          '                )\n' +
+          '            )\n' +
+          '            assert feed is not None, "Feed RecyclerView not found — feed may not have loaded"\n' +
+          '\n' +
+          '            print("PASS: Wikipedia first screen validated successfully")\n' +
+          '            if _HAS_INITIALIZER:\n' +
+          '                Initializer.update_session_status(\n' +
+          '                    session_id, "passed", "Wikipedia first screen validated"\n' +
+          '                )\n' +
+          '\n' +
+          '        except Exception as e:\n' +
+          '            print(f"An error occurred: {e}")\n' +
+          '            if _HAS_INITIALIZER:\n' +
+          '                Initializer.update_session_status(\n' +
+          '                    session_id, "failed",\n' +
+          '                    f"Wikipedia first screen test failed: {e}"\n' +
+          '                )\n' +
+          '            raise\n' +
+          '\n' +
+          '        finally:\n' +
+          '            if _HAS_INITIALIZER:\n' +
+          '                session_url = Initializer.get_session_url(session_id)\n' +
+          '            else:\n' +
+          '                session_url = (\n' +
+          '                    f"Dashboard: https://app-automate.browserstack.com"\n' +
+          '                    f"/dashboard/v2/sessions/{session_id}"\n' +
+          '                )\n' +
+          '            print(f"Test session URL: {session_url}")\n'
+      },
+      identifier: 'test_wikipedia_first_screen_SME_WIKI_001',
+      scope: 'test_wikipedia_first_screen_SME_WIKI_001',
+      scopes: [ 'smoke', 'test_wikipedia_sample.py', 'TestWikipediaSample' ],
+      file_name: 'smoke/test_wikipedia_sample.py',
+      vc_filepath: 'smoke/test_wikipedia_sample.py',
+      location: 'smoke/test_wikipedia_sample.py',
+      result: 'pending',
+      duration_in_ms: null,
+      started_at: '2026-10-01T18:04:50.309Z',
+      failure: undefined,
+      failure_type: undefined,
+      failure_reason: null,
+      retry_of: null,
+      custom_metadata: undefined,
+      tags: [],
+      customRerunParam: {
+        rerun_name: 'smoke/test_wikipedia_sample.py::TestWikipediaSample::test_wikipedia_first_screen_SME_WIKI_001'
+      },
+      hooks: [],
+      product_map: {
+        observability: true,
+        accessibility: false,
+        percy: false,
+        automate: false,
+        app_automate: true,
+        lts: false
+      },
+      integrations: {
+        browserstack: {
+          product: 'app-automate',
+          session_id: '8b7ce209f7864b1016f03645476237499a3eb75e',
+          capabilities: {
+            platform: 'LINUX',
+            webStorageEnabled: false,
+            takesScreenshot: true,
+            javascriptEnabled: true,
+            databaseEnabled: false,
+            networkConnectionEnabled: true,
+            locationContextEnabled: false,
+            warnings: {},
+            desired: {
+              platformName: 'Android',
+              'bstack:options': {
+                hostName: 'giteshkhare-G4NQNQ7007',
+                buildIdentifier: '1'
+              },
+              'goog:chromeOptions': {},
+              newCommandTimeout: 0,
+              deviceName: 'Samsung Galaxy S23',
+              chromedriverPorts: [ [ 18133, 18143 ] ],
+              chromedriverArgs: [ '--adb-port=5038' ],
+              automationName: 'UiAutomator2',
+              systemPort: 8203,
+              bundleID: 'org.wikipedia.alpha',
+              bundleId: 'org.wikipedia.alpha',
+              skipServerInstallation: true,
+              udid: 'RZCW40CY2FR',
+              appPackage: 'org.wikipedia.alpha',
+              appActivity: 'org.wikipedia.main.MainActivity',
+              nativeWebScreenshot: true,
+              disableSuppressAccessibilityService: true,
+              platformVersion: '13.0',
+              noReset: true
+            },
+            platformName: 'Android',
+            'bstack:options': {
+              hostName: 'giteshkhare-G4NQNQ7007',
+              buildIdentifier: '1'
+            },
+            'goog:chromeOptions': {},
+            newCommandTimeout: 0,
+            deviceName: 'RZCW40CY2FR',
+            chromedriverPorts: [ [ 18133, 18143 ] ],
+            chromedriverArgs: [ '--adb-port=5038' ],
+            automationName: 'UiAutomator2',
+            systemPort: 8203,
+            bundleID: 'org.wikipedia.alpha',
+            bundleId: 'org.wikipedia.alpha',
+            skipServerInstallation: true,
+            udid: 'RZCW40CY2FR',
+            appPackage: 'org.wikipedia.alpha',
+            appActivity: 'org.wikipedia.main.MainActivity',
+            nativeWebScreenshot: true,
+            disableSuppressAccessibilityService: true,
+            platformVersion: '13',
+            noReset: true,
+            deviceUDID: 'RZCW40CY2FR',
+            deviceApiLevel: 33,
+            deviceScreenSize: '1080x2340',
+            deviceScreenDensity: 480,
+            deviceModel: 'SM-S911B',
+            deviceManufacturer: 'samsung',
+            pixelRatio: 3,
+            statBarHeight: 81,
+            viewportRect: { left: 0, top: 81, width: 1080, height: 2034 },
+            optimalHubUrl: 'hub-aps.browserstack.com'
+          },
+          platform: 'android',
+          platform_version: '13',
+          browser: undefined,
+          browser_version: undefined,
+          device_name: 'RZCW40CY2FR'
+        }
+      }
+    },
+    logs: []
+  }
+] to 62748:0
+2026-10-01T18:04:51.830Z CLI info  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-10-01T18:04:51.894Z CLI info [testhub:request-queue-handler]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Added the event {
+  event_type: 'LogCreated',
+  logs: [
+    {
+      testFrameworkName: 'pytest',
+      testFrameworkVersion: '8.2.2',
+      testFrameworkState: 'INIT_TEST',
+      timestamp: '2026-10-01T18:04:34.079Z',
+      uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+      kind: 'TEST_LOG',
+      message: 'PASS: Wikipedia first screen validated successfully',
+      level: 'INFO',
+      test_run_uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143'
+    }
+  ]
+} to 62748:0 (target=/api/v2/builds/3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9/logs/batch)
+2026-10-01T18:04:52.751Z CLI info [testhub:request-queue-handler]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Processing batch event [
+  {
+    event_type: 'LogCreated',
+    logs: [
+      {
+        testFrameworkName: 'pytest',
+        testFrameworkVersion: '8.2.2',
+        testFrameworkState: 'INIT_TEST',
+        timestamp: '2026-10-01T18:04:34.079Z',
+        uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+        kind: 'TEST_LOG',
+        message: 'PASS: Wikipedia first screen validated successfully',
+        level: 'INFO',
+        test_run_uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143'
+      }
+    ]
+  }
+] to 62748:0
+2026-10-01T18:04:52.752Z CLI info  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-10-01T18:04:52.989Z CLI info [testhub:request-queue-handler]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Added the event {
+  event_type: 'LogCreated',
+  logs: [
+    {
+      testFrameworkName: 'pytest',
+      testFrameworkVersion: '8.2.2',
+      testFrameworkState: 'INIT_TEST',
+      timestamp: '2026-10-01T18:04:34.079Z',
+      uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+      kind: 'TEST_LOG',
+      message: 'Failed to update session status: 404',
+      level: 'INFO',
+      test_run_uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143'
+    }
+  ]
+} to 62748:0 (target=/api/v2/builds/3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9/logs/batch)
+2026-10-01T18:04:52.991Z CLI info [testhub:request-queue-handler]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Added the event {
+  event_type: 'LogCreated',
+  logs: [
+    {
+      testFrameworkName: 'pytest',
+      testFrameworkVersion: '8.2.2',
+      testFrameworkState: 'INIT_TEST',
+      timestamp: '2026-10-01T18:04:34.079Z',
+      uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+      kind: 'TEST_LOG',
+      message: "{'status': 404, 'message': 'Not Found'}",
+      level: 'INFO',
+      test_run_uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143'
+    }
+  ]
+} to 62748:0 (target=/api/v2/builds/3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9/logs/batch)
+2026-10-01T18:04:52.992Z CLI info [testhub:request-queue-handler]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Added the event {
+  event_type: 'LogCreated',
+  logs: [
+    {
+      testFrameworkName: 'pytest',
+      testFrameworkVersion: '8.2.2',
+      testFrameworkState: 'INIT_TEST',
+      timestamp: '2026-10-01T18:04:34.079Z',
+      uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+      kind: 'TEST_LOG',
+      message: 'Test session URL: Dashboard: https://app-automate.browserstack.com/dashboard/v2/sessions/8b7ce209f7864b1016f03645476237499a3eb75e',
+      level: 'INFO',
+      test_run_uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143'
+    }
+  ]
+} to 62748:0 (target=/api/v2/builds/3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9/logs/batch)
+2026-10-01T18:04:53.000Z CLI info [testhub:request-queue-handler]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Added the event {
+  event_type: 'LogCreated',
+  logs: [
+    {
+      testFrameworkName: 'pytest',
+      testFrameworkVersion: '8.2.2',
+      testFrameworkState: 'INIT_TEST',
+      timestamp: '2026-10-01T18:04:34.079Z',
+      uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+      kind: 'TEST_LOG',
+      message: 'Test passed:',
+      level: 'INFO',
+      test_run_uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143'
+    }
+  ]
+} to 62748:0 (target=/api/v2/builds/3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9/logs/batch)
+2026-10-01T18:04:53.001Z CLI info [testhub:request-queue-handler]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Added the event {
+  event_type: 'LogCreated',
+  logs: [
+    {
+      testFrameworkName: 'pytest',
+      testFrameworkVersion: '8.2.2',
+      testFrameworkState: 'INIT_TEST',
+      timestamp: '2026-10-01T18:04:34.079Z',
+      uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+      kind: 'TEST_LOG',
+      message: '3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9',
+      level: 'INFO',
+      test_run_uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143'
+    }
+  ]
+} to 62748:0 (target=/api/v2/builds/3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9/logs/batch)
+2026-10-01T18:04:53.002Z CLI info [testhub:request-queue-handler]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Added the event {
+  event_type: 'LogCreated',
+  logs: [
+    {
+      testFrameworkName: 'pytest',
+      testFrameworkVersion: '8.2.2',
+      testFrameworkState: 'INIT_TEST',
+      timestamp: '2026-10-01T18:04:34.079Z',
+      uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+      kind: 'TEST_LOG',
+      message: '\x1B[32m.\x1B[0m',
+      level: 'INFO',
+      test_run_uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143'
+    }
+  ]
+} to 62748:0 (target=/api/v2/builds/3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9/logs/batch)
+2026-10-01T18:04:53.004Z CLI info [testhub:request-queue-handler]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Added the event {
+  event_type: 'LogCreated',
+  logs: [
+    {
+      testFrameworkName: 'pytest',
+      testFrameworkVersion: '8.2.2',
+      testFrameworkState: 'INIT_TEST',
+      timestamp: '2026-10-01T18:04:34.079Z',
+      uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+      kind: 'TEST_LOG',
+      message: 'Test passed:  smoke/test_wikipedia_sample.py::TestWikipediaSample::test_wikipedia_first_screen_SME_WIKI_001 3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9',
+      level: 'INFO',
+      test_run_uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143'
+    }
+  ]
+} to 62748:0 (target=/api/v2/builds/3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9/logs/batch)
+2026-10-01T18:04:53.008Z CLI info [testhub:request-queue-handler]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Added the event {
+  event_type: 'LogCreated',
+  logs: [
+    {
+      testFrameworkName: 'pytest',
+      testFrameworkVersion: '8.2.2',
+      testFrameworkState: 'INIT_TEST',
+      timestamp: '2026-10-01T18:04:34.079Z',
+      uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+      kind: 'TEST_LOG',
+      message: 'smoke/test_wikipedia_sample.py::TestWikipediaSample::test_wikipedia_first_screen_SME_WIKI_001',
+      level: 'INFO',
+      test_run_uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143'
+    }
+  ]
+} to 62748:0 (target=/api/v2/builds/3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9/logs/batch)
+2026-10-01T18:04:53.829Z CLI info [testhub:request-queue-handler]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Processing batch event [
+  {
+    event_type: 'LogCreated',
+    logs: [
+      {
+        testFrameworkName: 'pytest',
+        testFrameworkVersion: '8.2.2',
+        testFrameworkState: 'INIT_TEST',
+        timestamp: '2026-10-01T18:04:34.079Z',
+        uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+        kind: 'TEST_LOG',
+        message: 'Failed to update session status: 404',
+        level: 'INFO',
+        test_run_uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143'
+      }
+    ]
+  },
+  {
+    event_type: 'LogCreated',
+    logs: [
+      {
+        testFrameworkName: 'pytest',
+        testFrameworkVersion: '8.2.2',
+        testFrameworkState: 'INIT_TEST',
+        timestamp: '2026-10-01T18:04:34.079Z',
+        uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+        kind: 'TEST_LOG',
+        message: "{'status': 404, 'message': 'Not Found'}",
+        level: 'INFO',
+        test_run_uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143'
+      }
+    ]
+  },
+  {
+    event_type: 'LogCreated',
+    logs: [
+      {
+        testFrameworkName: 'pytest',
+        testFrameworkVersion: '8.2.2',
+        testFrameworkState: 'INIT_TEST',
+        timestamp: '2026-10-01T18:04:34.079Z',
+        uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+        kind: 'TEST_LOG',
+        message: 'Test session URL: Dashboard: https://app-automate.browserstack.com/dashboard/v2/sessions/8b7ce209f7864b1016f03645476237499a3eb75e',
+        level: 'INFO',
+        test_run_uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143'
+      }
+    ]
+  },
+  {
+    event_type: 'LogCreated',
+    logs: [
+      {
+        testFrameworkName: 'pytest',
+        testFrameworkVersion: '8.2.2',
+        testFrameworkState: 'INIT_TEST',
+        timestamp: '2026-10-01T18:04:34.079Z',
+        uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+        kind: 'TEST_LOG',
+        message: 'Test passed:',
+        level: 'INFO',
+        test_run_uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143'
+      }
+    ]
+  },
+  {
+    event_type: 'LogCreated',
+    logs: [
+      {
+        testFrameworkName: 'pytest',
+        testFrameworkVersion: '8.2.2',
+        testFrameworkState: 'INIT_TEST',
+        timestamp: '2026-10-01T18:04:34.079Z',
+        uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+        kind: 'TEST_LOG',
+        message: '3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9',
+        level: 'INFO',
+        test_run_uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143'
+      }
+    ]
+  },
+  {
+    event_type: 'LogCreated',
+    logs: [
+      {
+        testFrameworkName: 'pytest',
+        testFrameworkVersion: '8.2.2',
+        testFrameworkState: 'INIT_TEST',
+        timestamp: '2026-10-01T18:04:34.079Z',
+        uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+        kind: 'TEST_LOG',
+        message: '\x1B[32m.\x1B[0m',
+        level: 'INFO',
+        test_run_uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143'
+      }
+    ]
+  },
+  {
+    event_type: 'LogCreated',
+    logs: [
+      {
+        testFrameworkName: 'pytest',
+        testFrameworkVersion: '8.2.2',
+        testFrameworkState: 'INIT_TEST',
+        timestamp: '2026-10-01T18:04:34.079Z',
+        uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+        kind: 'TEST_LOG',
+        message: 'Test passed:  smoke/test_wikipedia_sample.py::TestWikipediaSample::test_wikipedia_first_screen_SME_WIKI_001 3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9',
+        level: 'INFO',
+        test_run_uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143'
+      }
+    ]
+  },
+  {
+    event_type: 'LogCreated',
+    logs: [
+      {
+        testFrameworkName: 'pytest',
+        testFrameworkVersion: '8.2.2',
+        testFrameworkState: 'INIT_TEST',
+        timestamp: '2026-10-01T18:04:34.079Z',
+        uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+        kind: 'TEST_LOG',
+        message: 'smoke/test_wikipedia_sample.py::TestWikipediaSample::test_wikipedia_first_screen_SME_WIKI_001',
+        level: 'INFO',
+        test_run_uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143'
+      }
+    ]
+  }
+] to 62748:0
+2026-10-01T18:04:53.829Z CLI info  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-10-01T18:04:53.901Z CLI info [testhub:request-queue-handler]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Added the event {
+  event_type: 'TestRunFinished',
+  test_run: {
+    type: 'test',
+    framework: 'pytest',
+    uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+    name: 'test_wikipedia_first_screen_SME_WIKI_001',
+    body: {
+      lang: 'python',
+      code: '    def test_wikipedia_first_screen_SME_WIKI_001(self, request):\n' +
+        '        """\n' +
+        '        Verify the Wikipedia app launches and the Explore feed is visible.\n' +
+        '\n' +
+        '        Steps\n' +
+        '        -----\n' +
+        '        1. Obtain the driver injected by conftest (SDK) or local fixture.\n' +
+        '        2. Wait for the Search bar to appear — confirms the feed screen loaded.\n' +
+        '        3. Assert the Search bar hint text is "Search Wikipedia".\n' +
+        '        4. Assert the Explore bottom-nav tab is present.\n' +
+        '        5. Assert the feed RecyclerView is present.\n' +
+        '        """\n' +
+        '        # When run directly by pytest (not via Run_Local_Debugger_Wikipedia.py),\n' +
+        '        # request.node.driver may not be set — skip gracefully in that case.\n' +
+        '        if not hasattr(request.node, "driver") or request.node.driver is None:\n' +
+        '            pytest.skip("No driver injected — run via Run_Local_Debugger_Wikipedia.py "\n' +
+        '                        "or smoke/conftest.py")\n' +
+        '        driver = request.node.driver\n' +
+        '        session_id = driver.session_id\n' +
+        '\n' +
+        '        try:\n' +
+        '            wait = WebDriverWait(driver, 20)\n' +
+        '\n' +
+        '            # Step 2 — wait for search container\n' +
+        '            search_container = wait.until(\n' +
+        '                EC.presence_of_element_located(\n' +
+        '                    (AppiumBy.ID, self._SEARCH_CONTAINER_ID)\n' +
+        '                )\n' +
+        '            )\n' +
+        '            assert search_container is not None, (\n' +
+        '                "Search container not found — app may not have launched correctly"\n' +
+        '            )\n' +
+        '\n' +
+        '            # Step 3 — assert search hint text\n' +
+        '            search_hint = wait.until(\n' +
+        '                EC.presence_of_element_located(\n' +
+        '                    (AppiumBy.ANDROID_UIAUTOMATOR,\n' +
+        `                     f'new UiSelector().text("{self._SEARCH_HINT_TEXT}")')\n` +
+        '                )\n' +
+        '            )\n' +
+        '            actual_text = search_hint.text\n' +
+        '            assert actual_text == self._SEARCH_HINT_TEXT, (\n' +
+        `                f"Expected search hint '{self._SEARCH_HINT_TEXT}', got '{actual_text}'"\n` +
+        '            )\n' +
+        '\n' +
+        '            # Step 4 — assert Explore bottom-nav tab\n' +
+        '            explore_tab = wait.until(\n' +
+        '                EC.presence_of_element_located(\n' +
+        '                    (AppiumBy.ACCESSIBILITY_ID, self._EXPLORE_TAB_DESC)\n' +
+        '                )\n' +
+        '            )\n' +
+        '            assert explore_tab is not None, "Explore tab not found in bottom navigation"\n' +
+        '\n' +
+        '            # Step 5 — assert feed RecyclerView loaded\n' +
+        '            feed = wait.until(\n' +
+        '                EC.presence_of_element_located(\n' +
+        '                    (AppiumBy.ID, self._FEED_RECYCLER_ID)\n' +
+        '                )\n' +
+        '            )\n' +
+        '            assert feed is not None, "Feed RecyclerView not found — feed may not have loaded"\n' +
+        '\n' +
+        '            print("PASS: Wikipedia first screen validated successfully")\n' +
+        '            if _HAS_INITIALIZER:\n' +
+        '                Initializer.update_session_status(\n' +
+        '                    session_id, "passed", "Wikipedia first screen validated"\n' +
+        '                )\n' +
+        '\n' +
+        '        except Exception as e:\n' +
+        '            print(f"An error occurred: {e}")\n' +
+        '            if _HAS_INITIALIZER:\n' +
+        '                Initializer.update_session_status(\n' +
+        '                    session_id, "failed",\n' +
+        '                    f"Wikipedia first screen test failed: {e}"\n' +
+        '                )\n' +
+        '            raise\n' +
+        '\n' +
+        '        finally:\n' +
+        '            if _HAS_INITIALIZER:\n' +
+        '                session_url = Initializer.get_session_url(session_id)\n' +
+        '            else:\n' +
+        '                session_url = (\n' +
+        '                    f"Dashboard: https://app-automate.browserstack.com"\n' +
+        '                    f"/dashboard/v2/sessions/{session_id}"\n' +
+        '                )\n' +
+        '            print(f"Test session URL: {session_url}")\n'
+    },
+    identifier: 'test_wikipedia_first_screen_SME_WIKI_001',
+    scope: 'test_wikipedia_first_screen_SME_WIKI_001',
+    scopes: [ 'smoke', 'test_wikipedia_sample.py', 'TestWikipediaSample' ],
+    file_name: 'smoke/test_wikipedia_sample.py',
+    vc_filepath: 'smoke/test_wikipedia_sample.py',
+    location: 'smoke/test_wikipedia_sample.py',
+    result: 'passed',
+    duration_in_ms: 2688,
+    started_at: '2026-10-01T18:04:50.309Z',
+    finished_at: '2026-10-01T18:04:52.997Z',
+    failure: null,
+    failure_type: null,
+    failure_reason: null,
+    retry_of: null,
+    custom_metadata: {},
+    tags: [],
+    customRerunParam: {
+      rerun_name: 'smoke/test_wikipedia_sample.py::TestWikipediaSample::test_wikipedia_first_screen_SME_WIKI_001'
+    },
+    hooks: [ '516c18c9-2f9a-4bee-9e06-767150b2622c' ],
+    product_map: {
+      observability: true,
+      accessibility: false,
+      percy: false,
+      automate: false,
+      app_automate: true,
+      lts: false
+    }
+  },
+  logs: []
+} to 62748:0 (target=/api/v2/builds/3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9/batch)
+2026-10-01T18:04:53.903Z CLI info [testhub:request-queue-handler]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Added the event {
+  event_type: 'HookRunStarted',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'AFTER_EACH',
+    framework: 'pytest',
+    uuid: '36d429cc-90f6-430e-a137-fc3e5c6c44a8',
+    name: 'teardown',
+    result: 'pending',
+    test_run_id: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+    body: { lang: 'python', code: null },
+    scope: 'test_wikipedia_first_screen_SME_WIKI_001',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'smoke', 'test_wikipedia_sample.py', 'TestWikipediaSample' ],
+    file_name: 'smoke/test_wikipedia_sample.py',
+    location: 'smoke/test_wikipedia_sample.py',
+    vc_filepath: 'smoke/test_wikipedia_sample.py',
+    started_at: '2026-10-01T18:04:53.900Z'
+  },
+  logs: []
+} to 62748:0 (target=/api/v2/builds/3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9/batch)
+2026-10-01T18:04:54.945Z CLI info [testhub:request-queue-handler]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Added the event {
+  event_type: 'HookRunFinished',
+  hook_run: {
+    type: 'hook',
+    hook_type: 'AFTER_EACH',
+    framework: 'pytest',
+    uuid: '36d429cc-90f6-430e-a137-fc3e5c6c44a8',
+    name: 'teardown',
+    result: 'passed',
+    test_run_id: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+    body: { lang: 'python', code: null },
+    scope: 'test_wikipedia_first_screen_SME_WIKI_001',
+    custom_metadata: {},
+    tags: [],
+    scopes: [ 'smoke', 'test_wikipedia_sample.py', 'TestWikipediaSample' ],
+    file_name: 'smoke/test_wikipedia_sample.py',
+    location: 'smoke/test_wikipedia_sample.py',
+    vc_filepath: 'smoke/test_wikipedia_sample.py',
+    started_at: '2026-10-01T18:04:53.900Z',
+    finished_at: '2026-10-01T18:04:54.942Z'
+  },
+  logs: []
+} to 62748:0 (target=/api/v2/builds/3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9/batch)
+2026-10-01T18:04:54.947Z CLI info [testhub:request-queue-handler]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Added the event {
+  event_type: 'LogCreated',
+  logs: [
+    {
+      testFrameworkName: 'pytest',
+      testFrameworkVersion: '8.2.2',
+      testFrameworkState: 'INIT_TEST',
+      timestamp: '2026-10-01T18:04:34.079Z',
+      uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143',
+      kind: 'TEST_LOG',
+      message: '\x1B[32m                                                                                                                                         [100%]\x1B[0m',
+      level: 'INFO',
+      test_run_uuid: '1fe803c2-253d-4d93-ab4c-731aa5665143'
+    }
+  ]
+} to 62748:0 (target=/api/v2/builds/3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9/logs/batch)
+2026-10-01T18:04:55.067Z CLI info  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  [PRODUCTION] Making GET request to https://api.browserstack.com
+2026-10-01T18:04:55.069Z CLI info  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-10-01T18:04:55.071Z CLI info  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  [PRODUCTION] Making POST request to https://collector-observability.browserstack.com
+2026-10-01T18:04:55.999Z CLI info  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  [PRODUCTION] Making PUT request to https://collector-observability.browserstack.com
+2026-10-01T18:04:56.913Z CLI info [testhub:module]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  stopBuild: 3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9 request={"finished_at":"2026-10-01T18:04:55.067Z","finished_metadata":[],"custom_metadata":null} response={"data":""}
+2026-10-01T18:04:56.917Z CLI info  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  [PRODUCTION] Making POST request to https://api.browserstack.com
+2026-10-01T18:04:57.765Z CLI info [TEST REPORTING AND ANALYTICS:module]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Visit https://automation.browserstack.com/builds/3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9 to view build report, insights, and many more debugging information all at one place!
+2026-10-01T18:04:57.818Z CLI info  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  [PRODUCTION] Making POST request to https://eds.browserstack.com
+2026-10-01T18:05:27.778Z CLI info [main]  [3bdqebtttnklwvxuzs4lxj4s8oqchciyxwbux1o9]  [7bd3bb99-ff6b-4eca-bb3a-b5e7adfe0331]  Received graceful signal termination (SIGTERM), performing cleanup

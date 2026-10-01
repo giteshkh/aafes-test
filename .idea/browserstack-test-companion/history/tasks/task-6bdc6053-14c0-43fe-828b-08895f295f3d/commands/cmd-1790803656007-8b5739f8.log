@@ -1,0 +1,14 @@
+# 2026-09-30T21:27:36.007532Z  $ cd '/Users/giteshkhare/PycharmProjects/PythonProject' && python3 -m pytest smoke/test_wikipedia_sample.py -q --no-header --tb=short 2>&1
+E                                                                        [100%]
+==================================== ERRORS ====================================
+_ ERROR at setup of TestWikipediaSample.test_wikipedia_first_screen_SME_WIKI_001 _
+smoke/conftest.py:81: in driver_setup_and_teardown
+    driver = _create_driver()
+             
+smoke/conftest.py:46: in _create_driver
+    raise EnvironmentError(
+E   OSError: BROWSERSTACK_USERNAME and BROWSERSTACK_ACCESS_KEY must be set. Copy env.example to .env and fill in your credentials.
+=========================== short test summary info ============================
+ERROR smoke/test_wikipedia_sample.py::TestWikipediaSample::test_wikipedia_first_screen_SME_WIKI_001
+1 error in 0.04s
+# exit=1 at 2026-09-30T21:27:36.992372Z

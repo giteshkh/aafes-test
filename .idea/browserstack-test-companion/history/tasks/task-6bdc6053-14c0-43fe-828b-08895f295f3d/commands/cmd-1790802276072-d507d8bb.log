@@ -1,0 +1,10 @@
+# 2026-09-30T21:04:36.072894Z  $ pip3 install pytest 2>&1
+Requirement already satisfied: pytest in /Users/giteshkhare/.pyenv/versions/3.13.2/lib/python3.13/site-packages (9.1.1)
+Requirement already satisfied: iniconfig>=1.0.1 in /Users/giteshkhare/.pyenv/versions/3.13.2/lib/python3.13/site-packages (from pytest) (2.3.0)
+Requirement already satisfied: packaging>=22 in /Users/giteshkhare/.pyenv/versions/3.13.2/lib/python3.13/site-packages (from pytest) (26.3)
+Requirement already satisfied: pluggy<2,>=1.5 in /Users/giteshkhare/.pyenv/versions/3.13.2/lib/python3.13/site-packages (from pytest) (1.6.0)
+Requirement already satisfied: pygments>=2.7.2 in /Users/giteshkhare/.pyenv/versions/3.13.2/lib/python3.13/site-packages (from pytest) (2.21.0)
+
+[notice] A new release of pip is available: 24.3.1 -> 26.2.1
+[notice] To update, run: pip install --upgrade pip
+# exit=0 at 2026-09-30T21:04:36.958017Z

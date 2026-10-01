@@ -1,0 +1,6 @@
+# 2026-10-01T17:30:23.108065Z  $ grep -n "buildIdentifier\|buildName\|sessionName\|projectName" '/Users/giteshkhare/PycharmProjects/PythonProject/Initializer.py'
+73:        # buildIdentifier is intentionally omitted — BrowserStack auto-generates
+92:                "projectName": project_name,
+93:                "buildName":   build_name,
+94:                "sessionName": session_name,
+# exit=0 at 2026-10-01T17:30:23.569842Z

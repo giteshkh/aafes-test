@@ -1,0 +1,6 @@
+# 2026-10-01T17:12:15.930433Z  $ python3 -c "\nimport os, pathlib\nfrom dotenv import load_dotenv\nload_dotenv(dotenv_path=pathlib.Path('/Users/giteshkhare/PycharmProjects/PythonProject/.env'), override=False)\nprint('BUILD_NAME:', repr(os.environ.get('BUILD_NAME', 'NOT SET')))\nprint('SESSION_NAME:', repr(os.environ.get('SESSION_NAME', 'NOT SET')))\nprint('BUILD_NUMBER:', repr(os.environ.get('BUILD_NUMBER', 'NOT SET')))\n"
+Traceback (most recent call last):
+  File "<string>", line 3, in <module>
+    from dotenv import load_dotenv
+ModuleNotFoundError: No module named 'dotenv'
+# exit=1 at 2026-10-01T17:12:16.602528Z

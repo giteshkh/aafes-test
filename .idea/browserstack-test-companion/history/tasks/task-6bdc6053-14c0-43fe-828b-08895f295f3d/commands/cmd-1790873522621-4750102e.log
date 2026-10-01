@@ -1,0 +1,14 @@
+# 2026-10-01T16:52:02.628732Z  $ cd '/Users/giteshkhare/PycharmProjects/PythonProject' && grep -n "webdriver\|Remote\|hub\|browserstack\|session" Initializer.py | head -20
+22:from appium import webdriver
+47:        f"@hub-cloud.browserstack.com/wd/hub"
+88:            "browserstack.idleTimeout": "300",
+91:            "browserstack.video": "true",
+95:        driver_instance = webdriver.Remote(cls.HUB_URL, options=options)
+96:        Initializer.SESSION_ID = driver_instance.session_id
+100:    def update_session_status(cls, session_id, status, reason):
+101:        url = f"https://api.browserstack.com/automate/sessions/{session_id}.json"
+111:            print(f"Failed to update session status: {response.status_code}")
+115:    def get_session_url(cls, session_id):
+117:            f"Dashboard: https://app-automate.browserstack.com"
+118:            f"/dashboard/v2/sessions/{session_id}"
+# exit=0 at 2026-10-01T16:52:02.978717Z

@@ -1,0 +1,13 @@
+# 2026-09-30T21:39:46.362956Z  $ grep -n "skip\|driver\|hasattr" '/Users/giteshkhare/PycharmProjects/PythonProject/smoke/test_wikipedia_sample.py' | head -20
+18:The test uses `request.node.driver` which is injected by conftest.py
+30:from appium.webdriver.common.appiumby import AppiumBy
+31:from selenium.webdriver.support.ui import WebDriverWait
+32:from selenium.webdriver.support import expected_conditions as EC
+76:        1. Obtain the driver injected by conftest (SDK) or local fixture.
+83:        # request.node.driver may not be set — skip gracefully in that case.
+84:        if not hasattr(request.node, "driver") or request.node.driver is None:
+85:            pytest.skip("No driver injected — run via Run_Local_Debugger_Wikipedia.py "
+87:        driver = request.node.driver
+88:        session_id = driver.session_id
+91:            wait = WebDriverWait(driver, 20)
+# exit=0 at 2026-09-30T21:39:46.416028Z

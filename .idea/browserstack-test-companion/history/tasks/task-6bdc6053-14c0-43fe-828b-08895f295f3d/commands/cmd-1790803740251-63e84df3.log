@@ -1,0 +1,3 @@
+# 2026-09-30T21:29:00.252324Z  $ python3 -m flake8 --max-line-length=120 '/Users/giteshkhare/PycharmProjects/PythonProject/Initializer.py' '/Users/giteshkhare/PycharmProjects/PythonProject/conftest.py' '/Users/giteshkhare/PycharmProjects/PythonProject/Run_Local_Debugger_Wikipedia.py' '/Users/giteshkhare/PycharmProjects/PythonProject/Run_Config_Wikipedia.py' '/Users/giteshkhare/PycharmProjects/PythonProject/smoke/conftest.py' '/Users/giteshkhare/PycharmProjects/PythonProject/smoke/test_wikipedia_sample.py' 2>&1
+/Users/giteshkhare/.pyenv/versions/3.13.2/bin/python3: No module named flake8
+# exit=1 at 2026-09-30T21:29:00.556640Z

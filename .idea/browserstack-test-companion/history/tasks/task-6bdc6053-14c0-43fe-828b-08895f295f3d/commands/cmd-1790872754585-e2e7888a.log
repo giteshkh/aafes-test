@@ -1,0 +1,20 @@
+# 2026-10-01T16:39:14.585801Z  $ find '/Users/giteshkhare/PycharmProjects/PythonProject' -maxdepth 3 -type f -not -path '*/.venv/*' -not -path '*/.git/*' -not -path '*/.idea/*' -not -path '*/__pycache__/*' -not -path '*/.pytest_cache/*' | sort
+/Users/giteshkhare/PycharmProjects/PythonProject/.env
+/Users/giteshkhare/PycharmProjects/PythonProject/.gitignore
+/Users/giteshkhare/PycharmProjects/PythonProject/Initializer.py
+/Users/giteshkhare/PycharmProjects/PythonProject/Run_Config_Android.py
+/Users/giteshkhare/PycharmProjects/PythonProject/Run_Config_Wikipedia.py
+/Users/giteshkhare/PycharmProjects/PythonProject/Run_Local_Debugger.py
+/Users/giteshkhare/PycharmProjects/PythonProject/Run_Local_Debugger_Wikipedia.py
+/Users/giteshkhare/PycharmProjects/PythonProject/browserstack_android.yml
+/Users/giteshkhare/PycharmProjects/PythonProject/browserstack_wikipedia.yml
+/Users/giteshkhare/PycharmProjects/PythonProject/conftest.py
+/Users/giteshkhare/PycharmProjects/PythonProject/env.example
+/Users/giteshkhare/PycharmProjects/PythonProject/log/pytest_configs.json
+/Users/giteshkhare/PycharmProjects/PythonProject/pyproject.toml
+/Users/giteshkhare/PycharmProjects/PythonProject/requirements.txt
+/Users/giteshkhare/PycharmProjects/PythonProject/smoke/conftest.py
+/Users/giteshkhare/PycharmProjects/PythonProject/smoke/test_keepmesignedin.py
+/Users/giteshkhare/PycharmProjects/PythonProject/smoke/test_wikipedia_sample.py
+/Users/giteshkhare/PycharmProjects/PythonProject/uv.lock
+# exit=0 at 2026-10-01T16:39:14.607500Z

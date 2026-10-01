@@ -1,0 +1,6 @@
+# 2026-09-30T21:25:55.821007Z  $ grep -n "load_dotenv\|dotenv\|pathlib" '/Users/giteshkhare/PycharmProjects/PythonProject/conftest.py'
+4:Mirrors the customer's conftest.py with python-dotenv added at the top.
+25:    import pathlib
+26:    from dotenv import load_dotenv
+27:    load_dotenv(dotenv_path=pathlib.Path(__file__).resolve().parent / ".env",
+# exit=0 at 2026-09-30T21:25:55.860449Z

@@ -1,0 +1,10 @@
+# 2026-09-30T21:32:07.663195Z  $ cd '/Users/giteshkhare/PycharmProjects/PythonProject' && BROWSERSTACK_USERNAME=<redacted> BROWSERSTACK_ACCESS_KEY=<redacted> AppURL=bs://2cb25d26a5b87168117ec49799f3cc5e51756e61 PlatformType=android DeviceName="Samsung Galaxy S23" DeviceVersion=13.0 SESSION_NAME=test_wikipedia_sample BUILD_NAME="MEA | Wikipedia | android" BUILD_NUMBER=1 /Users/giteshkhare/.pyenv/versions/3.13.2/bin/pytest Run_Local_Debugger_Wikipedia.py::TestLocalWikipedia -q --no-header --tb=short 2>&1
+.                                                                        [100%]
+=============================== warnings summary ===============================
+Run_Local_Debugger_Wikipedia.py::TestLocalWikipedia::test_wikipedia_local[4]
+  /Users/giteshkhare/.pyenv/versions/3.13.2/lib/python3.13/site-packages/appium/webdriver/appium_connection.py:65: UserWarning: Embedding username and password in URL could be insecure, use ClientConfig instead
+    return {**super().get_remote_connection_headers(parsed_url, keep_alive=keep_alive), **cls.extra_headers}
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+1 passed, 1 warning in 17.28s
+# exit=0 at 2026-09-30T21:32:25.618163Z

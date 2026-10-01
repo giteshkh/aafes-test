@@ -1,0 +1,7 @@
+# 2026-10-01T17:43:51.221694Z  $ grep -rn "proxyUnawareApp" '/Users/giteshkhare/PycharmProjects/PythonProject/' --include="*.py" --include="*.yml" 2>/dev/null
+/Users/giteshkhare/PycharmProjects/PythonProject/smoke/conftest.py:68:            "proxyUnawareApp": True,
+/Users/giteshkhare/PycharmProjects/PythonProject/browserstack_android.yml:54:proxyUnawareApp: true
+/Users/giteshkhare/PycharmProjects/PythonProject/browserstack_wikipedia.yml:42:proxyUnawareApp: true
+/Users/giteshkhare/PycharmProjects/PythonProject/Initializer.py:97:                # proxyUnawareApp: tells BrowserStack the app does not go through
+/Users/giteshkhare/PycharmProjects/PythonProject/Initializer.py:100:                "proxyUnawareApp": True,
+# exit=0 at 2026-10-01T17:43:53.154074Z

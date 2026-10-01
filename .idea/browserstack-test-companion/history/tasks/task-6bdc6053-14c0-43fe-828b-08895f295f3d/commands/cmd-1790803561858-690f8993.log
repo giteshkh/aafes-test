@@ -1,0 +1,28 @@
+# 2026-09-30T21:26:01.858952Z  $ grep -n "load_dotenv\|USERNAME\|ACCESS_KEY\|HUB_URL\|APP_URL" '/Users/giteshkhare/PycharmProjects/PythonProject/Initializer.py' && echo "---" && grep -n "load_dotenv" '/Users/giteshkhare/PycharmProjects/PythonProject/conftest.py' && echo "---" && grep -n "load_dotenv" '/Users/giteshkhare/PycharmProjects/PythonProject/smoke/conftest.py' && echo "---" && grep -n "load_dotenv" '/Users/giteshkhare/PycharmProjects/PythonProject/Run_Local_Debugger_Wikipedia.py'
+14:Key fix for PyCharm: load_dotenv() uses an absolute path derived from
+16:directory. It runs BEFORE the class body so that USERNAME, ACCESS_KEY,
+17:APP_URL, and HUB_URL are all set from .env at class-definition time.
+27:# own directory, so a bare load_dotenv() would look for .env there, not at
+30:    from dotenv import load_dotenv
+32:    load_dotenv(dotenv_path=_env_path, override=False)
+38:    # These are evaluated AFTER load_dotenv() above, so .env values are visible.
+39:    USERNAME   = os.environ.get("BROWSERSTACK_USERNAME", "your_username_here")
+40:    ACCESS_KEY = os.environ.get("BROWSERSTACK_ACCESS_KEY", "your_access_key_here")
+41:    APP_URL    = os.environ.get("AppURL", "bs://2cb25d26a5b87168117ec49799f3cc5e51756e61")
+43:    # HUB_URL is built from USERNAME/ACCESS_KEY — also evaluated after dotenv loads
+44:    HUB_URL = (
+45:        f"https://{os.environ.get('BROWSERSTACK_USERNAME', 'your_username_here')}"
+46:        f":{os.environ.get('BROWSERSTACK_ACCESS_KEY', 'your_access_key_here')}"
+80:            "appium:app": cls.APP_URL,
+95:        driver_instance = webdriver.Remote(cls.HUB_URL, options=options)
+106:            auth=(cls.USERNAME, cls.ACCESS_KEY)
+---
+26:    from dotenv import load_dotenv
+27:    load_dotenv(dotenv_path=pathlib.Path(__file__).resolve().parent / ".env",
+---
+28:    from dotenv import load_dotenv
+29:    load_dotenv(dotenv_path=os.path.join(_project_root, ".env"), override=False)
+---
+26:    from dotenv import load_dotenv
+27:    load_dotenv(dotenv_path=pathlib.Path(__file__).resolve().parent / ".env",
+# exit=0 at 2026-09-30T21:26:01.894272Z

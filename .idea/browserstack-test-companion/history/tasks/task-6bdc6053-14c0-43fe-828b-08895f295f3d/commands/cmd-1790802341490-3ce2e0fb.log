@@ -1,0 +1,8 @@
+# 2026-09-30T21:05:41.491622Z  $ cd '/Users/giteshkhare/Downloads/MEA_script_set_up_files 2' && BROWSERSTACK_USERNAME=<redacted> BROWSERSTACK_ACCESS_KEY=<redacted> AppURL=bs://2cb25d26a5b87168117ec49799f3cc5e51756e61 PlatformType=android DeviceName="Samsung Galaxy S23" DeviceVersion=13.0 SESSION_NAME=test_wikipedia_sample BUILD_NAME="MEA | Wikipedia | android" BUILD_NUMBER=1 /Users/giteshkhare/.pyenv/versions/3.13.2/bin/pytest smoke/test_wikipedia_sample.py -q --no-header --tb=short --ignore=conftest.py 2>&1
+ImportError while loading conftest '/Users/giteshkhare/Downloads/MEA_script_set_up_files 2/conftest.py'.
+conftest.py:7: in <module>
+    from Initializer import Initializer
+Initializer.py:5: in <module>
+    from percy import percy_screenshot
+E   ModuleNotFoundError: No module named 'percy'
+# exit=4 at 2026-09-30T21:05:42.628845Z

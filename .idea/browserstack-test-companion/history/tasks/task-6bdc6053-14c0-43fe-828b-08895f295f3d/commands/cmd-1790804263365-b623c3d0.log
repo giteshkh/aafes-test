@@ -1,0 +1,13 @@
+# 2026-09-30T21:37:43.366199Z  $ grep -n "import\|TestWikipediaSample" '/Users/giteshkhare/PycharmProjects/PythonProject/Run_Local_Debugger_Wikipedia.py'
+21:import os
+25:    import pathlib
+26:    from dotenv import load_dotenv
+32:import pytest
+33:from Initializer import Initializer
+35:# NOTE: TestWikipediaSample is imported INSIDE the test method (not at module
+37:# A module-level import would cause pytest to discover TestWikipediaSample
+81:        Entry point — delegates to TestWikipediaSample using a mock request
+85:        # TestWikipediaSample when it scans this file.
+86:        from smoke.test_wikipedia_sample import TestWikipediaSample
+92:            test_instance = TestWikipediaSample()
+# exit=0 at 2026-09-30T21:37:43.421692Z

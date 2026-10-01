@@ -1,0 +1,7 @@
+# 2026-10-01T17:09:38.426891Z  $ grep -E "BUILD_NAME|SESSION_NAME|BUILD_NUMBER|APP_URL|BROWSERSTACK" '/Users/giteshkhare/PycharmProjects/PythonProject/.env' 2>/dev/null | sed 's/=.*/=<set>/'
+BROWSERSTACK_USERNAME=<set>
+BROWSERSTACK_ACCESS_KEY=<set>
+SESSION_NAME=<set>
+BUILD_NAME=<set>
+BUILD_NUMBER=<set>
+# exit=0 at 2026-10-01T17:09:40.034050Z

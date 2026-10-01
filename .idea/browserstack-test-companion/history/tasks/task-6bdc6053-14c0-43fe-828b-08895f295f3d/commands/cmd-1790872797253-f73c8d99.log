@@ -1,0 +1,3 @@
+# 2026-10-01T16:39:57.253588Z  $ python3 -m flake8 --max-line-length=120 '/Users/giteshkhare/PycharmProjects/PythonProject/Run_Local_Debugger.py' '/Users/giteshkhare/PycharmProjects/PythonProject/Run_Config_Android.py' '/Users/giteshkhare/PycharmProjects/PythonProject/smoke/test_keepmesignedin.py' 2>&1
+/Users/giteshkhare/.pyenv/versions/3.13.2/bin/python3: No module named flake8
+# exit=1 at 2026-10-01T16:39:57.568199Z

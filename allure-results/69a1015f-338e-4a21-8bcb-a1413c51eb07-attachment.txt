@@ -1,0 +1,8 @@
+2026-10-01T18:04:34Z [bstack11lll1l111l_opy_][INFO] - Remote Server Address being passed as : https://giteshkhare_Dd0BHq:fZo6PdQa5QEKYCnWbyjp@hub-cloud.browserstack.com/wd/hub
+2026-10-01T18:04:34Z [bstack11lll1l111l_opy_][INFO] - Completed setup!
+2026-10-01T18:04:34Z [bstack11lll1l111l_opy_][INFO] - driver_rank={driver_rank} driver.{method_name} platform_index={f.platform_index}: args={args} kwargs={'command_executor': 'https://hub-aps.browserstack.com/wd/hub', 'options': <appium.options.common.base.AppiumOptions object at 0x10b031f40>, 'keep_alive': True, 'file_detector': None}
+2026-10-01T18:04:34Z [bstack11lll1l111l_opy_][WARNING] - hub_url=https://hub-aps.browserstack.com/wd/hub
+PASS: Wikipedia first screen validated successfully
+Failed to update session status: 404
+{'status': 404, 'message': 'Not Found'}
+Test session URL: Dashboard: https://app-automate.browserstack.com/dashboard/v2/sessions/8b7ce209f7864b1016f03645476237499a3eb75e

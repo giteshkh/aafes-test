@@ -1,0 +1,21 @@
+# 2026-10-01T16:52:33.548502Z  $ grep -n "platformName\|automationName\|app\|HUB_URL\|hub-cloud\|hub.browserstack" '/Users/giteshkhare/PycharmProjects/PythonProject/Initializer.py'
+17:APP_URL, and HUB_URL are all set from .env at class-definition time.
+22:from appium import webdriver
+23:from appium.options.common.base import AppiumOptions
+43:    # HUB_URL is built from USERNAME/ACCESS_KEY — also evaluated after dotenv loads
+44:    HUB_URL = (
+47:        f"@hub-cloud.browserstack.com/wd/hub"
+76:            "platformName": "android",
+79:            "appium:automationName": "UiAutomator2",
+80:            "appium:app": cls.APP_URL,
+81:            "appium:noReset": "true",
+82:            "appium:ensureWebviewsHavePages": True,
+83:            "appium:nativeWebScreenshot": True,
+85:                "source": "appiumdesktop",
+89:            "appium:newCommandTimeout": 3600,
+90:            "appium:connectHardwareKeyboard": True,
+92:            "appProfiling": True,
+95:        driver_instance = webdriver.Remote(cls.HUB_URL, options=options)
+102:        headers = {"Content-Type": "application/json"}
+117:            f"Dashboard: https://app-automate.browserstack.com"
+# exit=0 at 2026-10-01T16:52:33.977964Z

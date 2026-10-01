@@ -1,0 +1,5 @@
+# 2026-10-01T17:27:39.195319Z  $ grep -n "buildIdentifier\|buildName\|sessionName\|projectName" '/Users/giteshkhare/PycharmProjects/PythonProject/Initializer.py'
+90:                "projectName": project_name,
+91:                "buildName":   build_name,
+92:                "sessionName": session_name,
+# exit=0 at 2026-10-01T17:27:39.222302Z
