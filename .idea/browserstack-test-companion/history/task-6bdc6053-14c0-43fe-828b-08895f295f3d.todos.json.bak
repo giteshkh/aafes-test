@@ -1,0 +1,11 @@
+{
+    "todos": [
+        {
+            "id": "5124d1b1-ac7b-44b5-8847-82ef6d10227a",
+            "content": "Move all files to PythonProject and add .env support",
+            "status": 2,
+            "phase": "mobile-test-automation"
+        }
+    ],
+    "phase": ""
+}

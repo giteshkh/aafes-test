@@ -1,0 +1,13 @@
+requests~=2.32.2
+pytest~=8.2.2
+Appium-Python-Client~=4.0.0
+selenium~=4.21.0
+reportportal-client
+python-dotenv~=1.0.1
+percy-selenium~=2.0.4
+mysql-connector-python~=9.0.0
+PyYAML~=6.0.1
+pandas~=2.2.3
+allure-pytest
+browserstack-sdk @ https://sdk-assets.browserstack.com/python/browserstack_sdk-latest.tar.gz
+openpyxl

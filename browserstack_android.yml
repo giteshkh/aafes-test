@@ -1,0 +1,54 @@
+# browserstack_android.yml — customer's original capabilities file
+# Credentials and all ${VAR} placeholders are resolved from env vars.
+# Set them in .env (copy env.example → .env) for local runs,
+# or as pipeline secrets for CI.
+
+userName: ${BROWSERSTACK_USERNAME}
+accessKey: ${BROWSERSTACK_ACCESS_KEY}
+framework: pytest
+app: ${AppURL}
+platforms:
+   - platformName: ${PlatformType}
+     deviceName: ${DeviceName}
+     platformVersion: ${DeviceVersion}
+
+#  - platformName: iOS
+#    deviceName: iPhone 15
+#    platformVersion: 17.0
+#  - platformName: android
+#    deviceName: Samsung Galaxy S24 Ultra
+#    platformVersion: 14.0
+#  - platformName: android
+#    deviceName: Samsung Galaxy S21 Ultra
+#    platformVersion: 11.0
+#  - platformName: android
+#    deviceName: Google Pixel 6 Pro
+#    platformVersion: 12.0
+#  - platformName: android
+#    deviceName: Google Pixel 4 XL
+#    platformVersion: 10.0
+#  - platformName: android
+#    deviceName: OnePlus 9
+#    platformVersion: 11.0
+#  - platformName: android
+#    deviceName: OnePlus 8
+#    platformVersion: 10.0
+browserstackLocal: false
+#buildName: AAFES-MEA-Android-${BUILD_NUMBER}
+sessionName: ${SESSION_NAME}
+buildName: ${BUILD_NAME}
+projectName: AAFES-MEA
+buildIdentifier: ${BUILD_NUMBER}
+debug: true
+networkLogs: false
+appProfiling: true
+disableAutoCaptureLogs: true
+percy: false
+percyCaptureMode: manual
+interactiveDebugging: true
+#browserstack.networkLogs: true
+selfHeal: true
+aiAuthoring: true
+appium:newCommandTimeout: 400
+idleTimeout: 400
+proxyUnawareApp: true

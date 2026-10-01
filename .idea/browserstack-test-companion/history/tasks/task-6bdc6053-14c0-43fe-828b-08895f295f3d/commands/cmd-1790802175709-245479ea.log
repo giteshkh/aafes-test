@@ -1,0 +1,3 @@
+# 2026-09-30T21:02:55.709706Z  $ cd '/Users/giteshkhare/Downloads/MEA_script_set_up_files 2' && python3 -c "from appium import webdriver; print('appium OK')" 2>&1
+appium OK
+# exit=0 at 2026-09-30T21:02:56.215812Z

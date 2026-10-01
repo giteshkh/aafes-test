@@ -1,0 +1,9 @@
+# 2026-09-30T20:26:35.315332Z  $ cd '/Users/giteshkhare/Downloads/MEA_script_set_up_files 2' && ls && python3 -m pip show browserstack-sdk 2>&1 | head -5
+Initializer.py			browserstack_android.yml
+Run_Config_Android.py		browserstack_wikipedia.yml
+Run_Config_Wikipedia.py		conftest.py
+Run_Local_Debugger.py		smoke
+Run_Local_Debugger_Wikipedia.py	test_keepmesignedin.py
+WARNING: Package(s) not found: browserstack-sdk
+
+# exit=0 at 2026-09-30T20:26:36.396795Z

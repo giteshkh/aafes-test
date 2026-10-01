@@ -1,0 +1,3 @@
+# 2026-09-30T20:26:26.398858Z  $ cd '/Users/giteshkhare/Downloads/MEA_script_set_up_files 2' && BROWSERSTACK_USERNAME=<redacted> BROWSERSTACK_ACCESS_KEY=<redacted> AppURL=bs://2cb25d26a5b87168117ec49799f3cc5e51756e61 PlatformType=android DeviceName="Samsung Galaxy S23" DeviceVersion=13.0 SESSION_NAME=test_wikipedia_sample BUILD_NAME="MEA | Wikipedia | android" BUILD_NUMBER=1 browserstack-sdk pytest --config browserstack_wikipedia.yml smoke/test_wikipedia_sample.py -q --no-header 2>&1
+/bin/sh: browserstack-sdk: command not found
+# exit=127 at 2026-09-30T20:26:27.693793Z

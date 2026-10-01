@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="TestCompanionChatSettings">
+    <option name="autoApprovalSettingsJson" value="{&quot;metadata&quot;:{},&quot;version&quot;:7,&quot;enabled&quot;:true,&quot;actions&quot;:{&quot;readFiles&quot;:true,&quot;readFilesExternally&quot;:false,&quot;editFiles&quot;:true,&quot;editFilesExternally&quot;:false,&quot;executeSafeCommands&quot;:true,&quot;executeAllCommands&quot;:false,&quot;useBrowser&quot;:false,&quot;useMcp&quot;:false},&quot;maxRequests&quot;:200,&quot;enableNotifications&quot;:false,&quot;favorites&quot;:[&quot;enableAutoApprove&quot;,&quot;readFiles&quot;,&quot;editFiles&quot;]}" />
+  </component>
+</project>

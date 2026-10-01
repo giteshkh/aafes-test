@@ -1,0 +1,7 @@
+# 2026-09-30T20:26:49.599415Z  $ cd '/Users/giteshkhare/Downloads/MEA_script_set_up_files 2' && python3 -c "from appium import webdriver; from appium.options.common.base import AppiumOptions; print('appium OK')" 2>&1
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    from appium import webdriver; from appium.options.common.base import AppiumOptions; print('appium OK')
+    
+ModuleNotFoundError: No module named 'appium'
+# exit=1 at 2026-09-30T20:26:49.854933Z

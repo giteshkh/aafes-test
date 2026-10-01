@@ -1,0 +1,5 @@
+# 2026-09-30T20:26:55.866538Z  $ python3 -c "\nimport ast, sys\n\nfiles = [\n    '/Users/giteshkhare/Downloads/MEA_script_set_up_files 2/smoke/test_wikipedia_sample.py',\n    '/Users/giteshkhare/Downloads/MEA_script_set_up_files 2/Run_Local_Debugger_Wikipedia.py',\n    '/Users/giteshkhare/Downloads/MEA_script_set_up_files 2/Run_Config_Wikipedia.py',\n]\n\nfor f in files:\n    with open(f) as fh:\n        src = fh.read()\n    try:\n        ast.parse(src)\n        print(f'SYNTAX OK: {f.split(\"/\")[-1]}')\n    except SyntaxError as e:\n        print(f'SYNTAX ERROR in {f.split(\"/\")[-1]}: {e}')\n        sys.exit(1)\n"
+SYNTAX OK: test_wikipedia_sample.py
+SYNTAX OK: Run_Local_Debugger_Wikipedia.py
+SYNTAX OK: Run_Config_Wikipedia.py
+# exit=0 at 2026-09-30T20:26:56.164974Z

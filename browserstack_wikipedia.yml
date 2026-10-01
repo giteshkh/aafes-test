@@ -1,0 +1,42 @@
+# browserstack_wikipedia.yml
+#
+# BrowserStack SDK capabilities for the Wikipedia sample test.
+# Mirrors the customer's browserstack_android.yml exactly.
+#
+# All ${VAR} placeholders are resolved from environment variables.
+# Set them in your .env file (copied from env.example) for local runs,
+# or as pipeline secrets for CI runs.
+#
+# Run commands:
+#   Local (SDK):  python Run_Config_Wikipedia.py
+#   CI:           set env vars in pipeline, then: python Run_Config_Wikipedia.py
+#   No SDK:       pytest Run_Local_Debugger_Wikipedia.py::TestLocalWikipedia
+
+userName: ${BROWSERSTACK_USERNAME}
+accessKey: ${BROWSERSTACK_ACCESS_KEY}
+framework: pytest
+
+app: ${AppURL}
+
+platforms:
+  - platformName: ${PlatformType}
+    deviceName: ${DeviceName}
+    platformVersion: ${DeviceVersion}
+
+browserstackLocal: false
+sessionName: ${SESSION_NAME}
+buildName: ${BUILD_NAME}
+projectName: AAFES-MEA
+buildIdentifier: ${BUILD_NUMBER}
+debug: true
+networkLogs: false
+appProfiling: false
+disableAutoCaptureLogs: true
+percy: false
+percyCaptureMode: manual
+interactiveDebugging: true
+selfHeal: false
+aiAuthoring: false
+appium:newCommandTimeout: 400
+idleTimeout: 400
+proxyUnawareApp: true
