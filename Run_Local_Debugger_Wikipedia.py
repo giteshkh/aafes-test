@@ -90,7 +90,14 @@ class TestLocalWikipedia:
 
         try:
             test_instance = TestWikipediaSample()
+            # Set breakpoints inside any of these (or in the helper methods).
+            # Each starts from the screen the previous one left behind, so the
+            # order matters only for what you see on the device.
             test_instance.test_wikipedia_first_screen_SME_WIKI_001(mock_request)
+            test_instance.test_wikipedia_my_lists_empty_state_SME_WIKI_002(mock_request)
+            test_instance.test_wikipedia_history_empty_state_SME_WIKI_003(mock_request)
+            test_instance.test_wikipedia_nearby_screen_SME_WIKI_004(mock_request)
+            test_instance.test_wikipedia_tab_round_trip_SME_WIKI_005(mock_request)
         except Exception as e:
             print(f"An error occurred: {e}")
             raise

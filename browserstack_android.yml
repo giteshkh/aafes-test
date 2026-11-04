@@ -1,8 +1,9 @@
-# browserstack_android.yml — customer's original capabilities file
-# Credentials and all ${VAR} placeholders are resolved from env vars.
-# Set them in .env (copy env.example → .env) for local runs,
-# or as pipeline secrets for CI.
-
+# >>> CUSTOMER: this file no longer holds credentials or the app url. <<<
+# userName / accessKey / app come from environment variables: BROWSERSTACK_USERNAME,
+# BROWSERSTACK_ACCESS_KEY, AppURL (put them in .env, see env.example).
+# Also changed vs your original: idleTimeout (was browserstack.idleTimeout),
+# proxyUnawareApp (false for Wikipedia; set true again for your AAFES app) and the
+# accessibility block at the bottom (the SDK only reads accessibility from THIS file).
 userName: ${BROWSERSTACK_USERNAME}
 accessKey: ${BROWSERSTACK_ACCESS_KEY}
 framework: pytest
@@ -51,4 +52,16 @@ selfHeal: true
 aiAuthoring: true
 appium:newCommandTimeout: 400
 idleTimeout: 400
-proxyUnawareApp: true
+# >>> CUSTOMER: false so the Wikipedia app runs; set back to true for your AAFES app if it needs it. <<<
+proxyUnawareApp: false
+accessibility: true
+accessibilityOptions:
+  wcagVersion: wcag21aaa
+  screenReaderAutomation:
+    autoReport: true
+    linearNavigation: true
+    linearNavigationTimeout: 300000
+  includeIssueType:
+    bestPractice: true
+    needsReview: true
+    experimentalRules: true
