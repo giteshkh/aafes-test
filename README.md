@@ -1,198 +1,144 @@
-# AAFES MEA — BrowserStack App Automate Sample Repo
+# AAFES MEA — run the Wikipedia test and the sign-in test on BrowserStack
 
-This repo is a minimal, self-contained reference for the AAFES MEA test suite.
-It contains a Wikipedia sample test (verified working, no login required) to validate the infrastructure, and the customer's login test ready to run against the AAFES app.
+Two ways to run the same tests from PyCharm:
+
+| | Legacy (no SDK) | SDK |
+|---|---|---|
+| Entry point | `Run_Local_Debugger_Wikipedia.py` / `Run_Local_Debugger.py` | the same files, launched through `browserstack-sdk` |
+| Capabilities come from | `Initializer.py` | `browserstack_android.yml` **merged with** `Initializer.py` |
+| Accessibility / screen reader settings | not applied | applied (from `browserstack_android.yml`) |
+
+Use one config file for both: `browserstack_android.yml`.
 
 ---
 
-## 1. Prerequisites
+## 1. Setup
 
-- Python 3.9+
-- BrowserStack App Automate account
-
-Install dependencies:
+Install dependencies (Python 3.9+):
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
-
-## 2. One-time setup
-
-Copy `env.example` to `.env` and fill in your values:
+Copy `env.example` to `.env` (it is git-ignored) and fill it in:
 
 ```bash
 cp env.example .env
 ```
 
-Edit `.env`:
-
 ```
-BROWSERSTACK_USERNAME=your_browserstack_username
-BROWSERSTACK_ACCESS_KEY=your_browserstack_access_key
-
-# Wikipedia sample (apk file included):
-AppURL=bs://YOUR_WIKIPEDIA_APP_URL_HERE
-
-# Customer AAFES MEA app — replace with your uploaded bs:// URL:
-# AppURL=bs://YOUR_AAFES_APP_URL_HERE
-
+BROWSERSTACK_USERNAME=<your BrowserStack username>
+BROWSERSTACK_ACCESS_KEY=<your BrowserStack access key>
+AppURL=bs://<your app id>
 PlatformType=android
 DeviceName=Samsung Galaxy S23
 DeviceVersion=13.0
-
-SESSION_NAME=test_keepmesignedin
-BUILD_NAME=MEA | Smoke | android
-
-# AAFES app credentials
-APP_USERNAME=automlplus01
-APP_PASSWORD=Aafes123#
+SESSION_NAME=wikipedia_local
+BUILD_NAME=MEA | Wikipedia | Debug
+BUILD_NUMBER=1
+PROXY_UNAWARE_APP=false
+APP_USERNAME=<sign-in test account username>
+APP_PASSWORD=<sign-in test account password>
 ```
 
-Upload your APK to BrowserStack once:
+Quote values that contain spaces if you `source` the file in a shell. The code loads `.env` itself where it needs to.
 
-```bash
-curl -u "USERNAME:ACCESS_KEY" \
-  -X POST "https://api-cloud.browserstack.com/app-automate/upload" \
-  -F "file=@/path/to/your/app.apk"
-# Returns: { "app_url": "bs://abc123..." }
-# Set AppURL=bs://abc123... in .env
-```
+### What you must change in the code (marked `>>> CUSTOMER:`)
 
----
-
-## 3. The proxyUnawareApp capability
-
-The AAFES app handles its own network stack and breaks when BrowserStack routes traffic through its internal proxy. The `proxyUnawareApp: true` capability tells BrowserStack to bypass its proxy for this app.
-
-It is set in **all three run modes**:
-
-| Mode | Where it is set |
+| File | What to change |
 |---|---|
-| No-SDK (Initializer.py) | `bstack:options` inside `get_driver()` |
-| SDK local / CI | `browserstack_android.yml` — `proxyUnawareApp: true` |
-| Standalone pytest | `smoke/conftest.py` — `bstack:options` |
+| `Initializer.py` | `APP_URL` is hardcoded and is used directly by the legacy path. It is set to the Wikipedia sample `bs://2cb25d26…`. Put your own app id there (yours was `bs://1548e810891c53f18254d1d04527e7e3e854e442`). |
+| `browserstack_android.yml` | `proxyUnawareApp` is `false` so the Wikipedia app runs. Set it back to `true` for your AAFES app if it needs it. |
+| `.env` | `APP_USERNAME` / `APP_PASSWORD` for the sign-in test (no longer hardcoded in `smoke/test_keepmesignedin.py`). |
 
-**Verified on BrowserStack dashboard** — the capability shows as `browserstack.proxyUnawareApp: true` in the session input caps.
-
-**Root cause of the original error:** When `${AppURL}` env var was not exported before running `browserstack-sdk pytest`, the SDK could not resolve the app URL and fell back to a Chrome WebDriver session. `proxyUnawareApp` was then sent to Chrome (not Appium), which rejected it as `invalid locator`. The `.env` file fixes this by ensuring all `${VAR}` placeholders are resolved before the SDK starts.
+Rotate any credentials that were previously hardcoded in the files you shared.
 
 ---
 
-## 4. Run modes
+## 2. Legacy run (no SDK)
 
-### Mode A — No SDK, PyCharm play button
+PyCharm: open `Run_Local_Debugger_Wikipedia.py` (Wikipedia) or `Run_Local_Debugger.py` (sign-in), then use the normal run/debug button. The interpreter must be the project's `.venv`.
 
-1. Open `Run_Local_Debugger_Wikipedia.py` (Wikipedia) or `Run_Local_Debugger.py` (AAFES) in PyCharm.
-2. Click the green play button.
-
-PyCharm runs pytest directly. `Initializer.get_driver()` creates the Appium session using credentials from `.env`. `proxyUnawareApp: true` is passed in `bstack:options`.
-
-**PyCharm interpreter:** Go to `Settings > Project > Python Interpreter` and select `.venv/bin/python` so `python-dotenv` is available and `.env` is loaded.
-
----
-
-### Mode B — No SDK, terminal
+Terminal:
 
 ```bash
-# Verify infra with Wikipedia
-pytest Run_Local_Debugger_Wikipedia.py::TestLocalWikipedia
-
-# AAFES login test
-pytest Run_Local_Debugger.py::TestLocal
+python -m pytest -s Run_Local_Debugger_Wikipedia.py
 ```
+
+Notes:
+- The session is created by `Initializer.get_driver()`.
+- The autouse fixture in `conftest.py` also creates a driver from `browserstack_android.yml`, so a legacy run opens two BrowserStack sessions. The test uses the one from `Initializer`.
+- `conftest.py` fills the yml's `${VAR}` placeholders from environment variables when the SDK is not running, so `PlatformType`, `DeviceName`, `DeviceVersion` and `AppURL` must be set (in `.env` or the run configuration).
 
 ---
 
-### Mode C — With SDK, local
+## 3. SDK run (PyCharm)
 
-```bash
-# Wikipedia
-python Run_Config_Wikipedia.py
+Create one **Python** run/debug configuration (not "Python tests"):
 
-# AAFES smoke suite
-python Run_Config_Android.py
-```
-
-Or directly:
-
-```bash
-browserstack-sdk pytest --config browserstack_android.yml smoke/test_keepmesignedin.py
-```
-
-`Run_Config_*.py` loads `.env` via `python-dotenv`, exports all values to `os.environ`, then spawns the SDK subprocess. The SDK reads `BROWSERSTACK_USERNAME`, `BROWSERSTACK_ACCESS_KEY`, and all `${VAR}` placeholders from `os.environ`. `proxyUnawareApp: true` is in the YML and passed to BrowserStack automatically.
-
----
-
-### Mode D — CI pipeline
-
-Set these as pipeline secrets:
-
-```
-BROWSERSTACK_USERNAME=your_username
-BROWSERSTACK_ACCESS_KEY=your_access_key
-AppURL=bs://YOUR_AAFES_APP_URL_HERE
-PlatformType=android
-DeviceName=Samsung Galaxy S23
-DeviceVersion=13.0
-SESSION_NAME=test_keepmesignedin
-BUILD_NAME=MEA | Smoke | android
-BUILD_NUMBER=${BUILD_NUMBER}
-APP_USERNAME=automlplus01
-APP_PASSWORD=Aafes123#
-```
-
-Run:
-
-```bash
-python Run_Config_Android.py
-```
-
-No `.env` file needed in CI. `python-dotenv` uses `override=False` so pipeline vars always win.
-
----
-
-## 5. Verify infra first (Wikipedia test)
-
-Before running the AAFES login test, verify the infrastructure works:
-
-```bash
-pytest Run_Local_Debugger_Wikipedia.py::TestLocalWikipedia
-```
-
-Expected: **1 passed** — Wikipedia app launches, Search bar visible, Explore tab present.
-
-If this passes, credentials, app URL, device config, and `proxyUnawareApp` are all working correctly.
-
----
-
-## 6. File reference
-
-| File | Purpose |
+| Field | Value |
 |---|---|
-| `env.example` | Template — copy to `.env` |
-| `Initializer.py` | No-SDK session creation; `proxyUnawareApp: true` in `bstack:options` |
-| `conftest.py` | Root conftest for SDK mode |
-| `smoke/conftest.py` | Minimal conftest for standalone pytest runs |
-| `browserstack_android.yml` | SDK caps for AAFES app; `proxyUnawareApp: true` |
-| `browserstack_wikipedia.yml` | SDK caps for Wikipedia sample; `proxyUnawareApp: true` |
-| `Run_Local_Debugger.py` | No-SDK runner for AAFES tests |
-| `Run_Local_Debugger_Wikipedia.py` | No-SDK runner for Wikipedia test |
-| `Run_Config_Android.py` | SDK suite runner for AAFES smoke |
-| `Run_Config_Wikipedia.py` | SDK runner for Wikipedia sample |
-| `smoke/test_keepmesignedin.py` | Customer login test |
-| `smoke/test_wikipedia_sample.py` | Wikipedia infra verification test |
+| Run type | `script` (change the dropdown from `module`) |
+| Script path | `<project>/.venv/bin/browserstack-sdk` (this path only, no arguments) |
+| Script parameters | `pytest -s $FilePath$` |
+| Working directory | the project root |
+| Python interpreter | the project's `.venv` |
+| Environment variables | `PYTHONUNBUFFERED=1;BROWSERSTACK_CONFIG_FILE=browserstack_android.yml;
+| Paths to ".env" files | leave empty |
+
+To run: open `Run_Local_Debugger_Wikipedia.py` (or `Run_Local_Debugger.py`) in the editor and press Run or Debug on this configuration. `$FilePath$` passes the open file to pytest.
+
+Terminal equivalent:
+
+```bash
+BROWSERSTACK_CONFIG_FILE=browserstack_android.yml .venv/bin/browserstack-sdk pytest -s Run_Local_Debugger_Wikipedia.py
+```
+
+`BROWSERSTACK_USERNAME`, `BROWSERSTACK_ACCESS_KEY` and `AppURL` must also be in the environment. `conftest.py` and `Initializer.py` load `.env` themselves, but export them in the shell to be safe.
+
+What to expect:
+- The log shows `claimed leader role`, `collected 1 item` and `1 passed`.
+- The dashboard build and session names come from `browserstack_android.yml`.
+- Accessibility scanning shows up as `AccessibilityModule ... running 1 scripts` lines in the log.
+
+Where the SDK takes capabilities from:
+- `browserstack_android.yml` sets build, session and project names, device, OS version, app, `appProfiling` and all accessibility options.
+- Capabilities the yml does not set (`noReset`, video, `percyOptions` and others) still come from `Initializer.py`.
+- For a capability set in both, test results showed the `Initializer` value reached the hub in one case (`idleTimeout`).
 
 ---
 
-## 7. Troubleshooting
+## 4. Accessibility and screen reader settings
+
+They live only in `browserstack_android.yml` and apply only to SDK runs:
+
+```yaml
+accessibility: true
+accessibilityOptions:
+  wcagVersion: wcag21aaa
+  screenReaderAutomation:
+    autoReport: true
+    linearNavigation: true
+    linearNavigationTimeout: 300000
+```
+
+The SDK scan was confirmed in the logs. The screen reader report itself was not confirmed on the dashboard, and the BrowserStack docs list Screen Reader Automation under the Ultimate plan.
+
+---
+
+## 5. The AAFES runner and the sign-in test
+
+`Run_Local_Debugger.py` (your original runner) imports `sanity.test_sanity_Home` and `tests.test_Generic`, and `smoke/test_keepmesignedin.py` imports `objrepo`, `tests.test_Generic`, `utils.appium_utils` and `utils.general_utils`. None of these are in this repo, so both only run in your full project. Neither was run here; only `Run_Local_Debugger_Wikipedia.py` and the Wikipedia tests were.
+
+---
+
+## 6. Troubleshooting
 
 | Symptom | Cause | Fix |
 |---|---|---|
-| `invalid locator` + `Session info: chrome=114` | SDK fell back to Chrome — `AppURL` not set | Set `AppURL` in `.env` before running |
-| `Invalid username or password` | `.env` not loaded | Set PyCharm interpreter to `.venv`; check `.env` credentials |
-| `Re-run N` on dashboard | Static `BUILD_NUMBER` | Fixed — `buildName` now always includes a timestamp |
-| `Untitled` build name | `BUILD_NAME` not in `.env` | Add `BUILD_NAME=MEA | Smoke | android` to `.env` |
-| `Authorization Required` | Credentials not loaded | Check `.env` has `BROWSERSTACK_USERNAME` and `BROWSERSTACK_ACCESS_KEY` |
-| App network errors / proxy issues | `proxyUnawareApp` missing | Confirmed present in all 3 run modes — see Section 3 |
+| `Authorization Required` | credentials not set | set `BROWSERSTACK_USERNAME` and `BROWSERSTACK_ACCESS_KEY` |
+| `BROWSERSTACK_INVALID_APP_URL` | the app id is not on your account | set a valid id in `Initializer.py` (legacy) and `AppURL` |
+| `BROWSERSTACK_INVALID_PLATFORM_NAME_DDA` | `PlatformType`, `DeviceName` or `DeviceVersion` not set | set them |
+| `PROXY_UNAWARE_OS_NOT_SUPPORTED` | `proxyUnawareApp: true` with an app that cannot use it | set it to `false` for that app |
+| `FileNotFoundError` in PyCharm | arguments typed into the script path | put only the SDK path there; the rest in Script parameters |
+| SDK exits at once with `follower joined leader`, no pytest output | stale SDK sockets from an earlier run | `rm -f /tmp/sdk-platform-*.sock` when no SDK run is in progress |
